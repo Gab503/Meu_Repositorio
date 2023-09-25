@@ -20,6 +20,6 @@
     </p><hr>
 <p>Explicação:<br> fun é como se fosse o def do Python, é usado para declarar uma função.<br><br> A main() é a função onde seu programa começa.<br><br>O Corpo de uma função em Kotlin, é escrito entre chaves { }.<br><br> A função print( ) é usada para imprimir textos / string na tela. Quando não tem mais espaço na tela, será exibido na linha de baixo o restante. Já a função println( ), pula linha. Basta lembrá-se do escraval do portugol.<br><br>Outra semelhança com Python é que não precisa de ; (ponto vírgula) no final de cada "código".</p>
     
-    
+<p>Documentação ofical do Kotlin: <a href="https://kotlinlang.org/docs/kotlin-tour-hello-world.html" target="_blank">para acessar clique aqui</a></p>
 </body>
 </html>
