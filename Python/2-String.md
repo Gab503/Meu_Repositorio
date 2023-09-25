@@ -53,7 +53,8 @@ agora:
 
 Cada palavra recebe uma indexação nova; e cada palavra ficará dentro de um “bloco maior”. 
 
-# Junção de String
+
+# Junção de String  
     ‘-’.join(frase) == Se eu tenho palavras separadas em “blocos maiores”/lista ( com o split), ficando:
 
      Curso-em-Vídeo-Python
