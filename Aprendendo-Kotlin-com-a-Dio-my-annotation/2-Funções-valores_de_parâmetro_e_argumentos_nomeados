@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funções - Valores de Parâmetro e Argumentos Nomeados</title>
+</head>
+<body>
+    <h1>Funções</h1>
+<p></p><br>
+  
+    fun sum(x: Int, y: Int): Int {
+        return x + y
+    }
+    fun main() {
+        println(sum(1, 2))
+        // 3
+    }
+    
+    </p>
+<p>Como mencionado anteriormente, você pode criar suas próprias funções em Kottlin usando o comando fun.<br>Os parâmetros da função são escritos entre parênteses ( ).<br> O tipo de retorno é escrito após os parênteses da função (), separados por dois ponto :.<br>O corpo de uma função é escrito entre chaves { }.<br>A palavra-chave return é usada para sair ou retornar algo de uma função.<br><br>Se você é iniciante assim como eu, pode ser ver preso no entendimento da função return, usando uma analogia eu conseguir entender, é mais ou menos assim:<br>Imagine um restaurante, nele há a cozinha, a mesa dos cliente etc... nos concentraremos apenas nesses dois, a cozinha é onde são preparados os pratos para os clientes, então vem um garçom pegar na cozinha os pratos para levar aos cliente. Nessa analogia, a cozinha seria a função, o garçom é a função return, que vai "levar algo de fora da função", geralmemte um valor, ou melhor, retorna algo para o código.<br>Exemplo de funções em Kotlin:<br><br>
+  
+    // 1
+    // Declara uma função chamada de printMessage    
+    // possui um parâmetro chamado message do tipo String, isto é, recebe como parâmetro um texto para fazer algo
+    // Neste caso é imprimir a mensagem recebida ( o parâmetro). 
+    // Unit -> o tipo de return; Significa qualquer coisa, pode usar ou não, é opcional neste caso.
+    
+    fun printMessage(message: String): Unit{                                   // 1                                                                      
+        println(message)                    
+    }
+    
+    // 2
+    // Declara uma função chamada printMessageWithPrefix
+    // Observe o prefixo, ele está recebendo uma atribuição de valor
+    // Um valor padrão. Caso não seja específicado o valor
+    // Será atribuido info
+    // Interpolação de strings = ''%prefix'' -> Substituindo + para concadernar strings.
+    
+    fun printMessageWithPrefix(message: String, prefix: String = "info") {      // 2
+        println("$prefix $message")
+    }
+    
+    // 3
+    // Uma função chamada soma (sum), vai receber valores inteiros
+    // e retorna um Int (número inteiro) também, 
+    // com a função return, retorna o resultado.
+    
+    fun sum(x: Int, y: Int):Int{                                               // 3
+        return x + y
+    }
+    
+    // 4
+    // Um função de multiplicação. Retornando x * y, o return está implícito neste caso.
+    fun multiply(x: Int, y: Int) = x * y                                       // 4
+     
+    
+    fun main(){        
+        // 5- imprimir a mensagem ''Hello''
+        printMessage("Hello")                                                  // 5
+        
+        // 6- imprimir Log Hello
+        printMessageWithPrefix("Hello", "Log")                                 // 6
+        
+        // 7- Não foi específicado o prefixo = info Hello
+        printMessageWithPrefix("Hello")                                        // 7
+        
+        // 8 - O mesmo que a 6, mas para demostrar atribuição de variável.
+        printMessageWithPrefix(prefix = "Log", message = "Hello")              // 8
+        
+       // 9 soma  
+        println(sum(1, 2))                                                     // 9
+        
+        // Multiplicação
+        println(multiply(2, 4))                                                // 10 
+    } 
+<br><br>
+Observação: Você deve ter notado o uso de do símbolo $, este símbolo é usado para acessar os valores dos parâmetros, convertê-los em Stringtipo e concatená-los em uma String para impressão. Também possui um uso semelhante ao format do Python. 
+</p>
+</body>
+</html>
