@@ -11,4 +11,6 @@ Você pode automatizar, portanto a recuperação de URLs que começam com HTTP o
      
  A Apple tem sua própria API para o serviço iTunes.  O software que oferece a capacidade de baixar e pesquisar músicas, além de outras informações. 
 
+## JSON JavaScript Object Notation:
+É usado como um formato independente de linguagem para troca de dados entre computadores. Por linguagem independente, quer dizer que não precisa usar JavaScript, você pode usar qualquer outra linguagem para ler JSON ou escrevê-lo também. 
 
