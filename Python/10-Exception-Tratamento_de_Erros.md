@@ -37,12 +37,4 @@ Outro exemplo:
 
 Este loop acima, irá parar somente após o usuário digitar um número inteiro. Otimizando:
 
-    while True:
-        try:
-            break
-        except ValueError:
-            print("x is not an integer")
-    print(f" x is {x}")
-         x = int(input("What's x ? "))
-
-Obs: Ao testar o código acima, verá que deu um erro, aparentemente é de inicialização de x. 
+    
