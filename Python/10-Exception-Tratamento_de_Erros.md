@@ -35,6 +35,5 @@ Outro exemplo:
             break
     print(f" x is {x}")
 
-Este loop acima, irá parar somente após o usuário digitar um número inteiro. Otimizando:
 
     
