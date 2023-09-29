@@ -7,7 +7,7 @@
     <title>POO</title>
 </head>
 <body>
-    <h1>Gerança simples</h1>
+    <h1>Herança simples</h1>
        
     // Para que uma classe base, que possa ser uma classe de herença, "pai"de outra classe
     // ela precisa do comando open class, que diz que ela pode ser usada como extensão de outra classe
