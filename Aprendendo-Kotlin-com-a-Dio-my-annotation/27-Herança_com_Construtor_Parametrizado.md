@@ -13,23 +13,23 @@
 <br>
 A receita básica para torta é como um construtor parametrizado. Ele fornece uma estrutura básica para todas as tortas. As receitas para tortas específicas são como construtores de subclasses. Elas fornecem implementações específicas para os parâmetros do construtor parametrizado.</p>
 
-// Observe que a função não é open. Então não pode ser sobrescrita 
-open class Tiger(val origin: String){
-    fun sayHello(){
-        println("A tiger from $origin says: grrhhhh!")
+    // Observe que a função não é open. Então não pode ser sobrescrita 
+    open class Tiger(val origin: String){
+        fun sayHello(){
+            println("A tiger from $origin says: grrhhhh!")
     }
-}
+    }
 
-// Herdar uma classe passando uma parâmetro padrão.
-// A classe SiberianTiger, é um Tiger passando sua origem como "Siberia"
-class SiberianTiger : Tiger("Siberia")
+    // Herdar uma classe passando uma parâmetro padrão.
+    // A classe SiberianTiger, é um Tiger passando sua origem como "Siberia"
+    class SiberianTiger : Tiger("Siberia")
 
-fun main(){
-    val tiger : Tiger = SiberianTiger()
-    tiger.sayHello()
+    fun main(){
+        val tiger : Tiger = SiberianTiger()
+        tiger.sayHello()
  
-}
-// Saída: A tiger from Siberia says: grrhhhh!
+    }
+    // Saída: A tiger from Siberia says: grrhhhh!
     
 </body>
 </html>
