@@ -30,6 +30,57 @@ A receita básica para torta é como um construtor parametrizado. Ele fornece um
  
     }
     // Saída: A tiger from Siberia says: grrhhhh!
-    
+ 
+  
+<h2>Classe Tiger</h2>
+<p>
+A classe Tiger é uma classe aberta que representa um tigre. Ela tem um atributo "origin" que representa a origem do tigre. Ela também tem um método `sayHello()` que imprime uma mensagem de saudação.
+</p><br>
+
+<p>
+Atributo "origin"
+O atributo "origin" é um atributo de tipo "String" que representa a origem do tigre.
+<br>
+</p> 
+
+<p>
+Método "sayHello()"
+O método "sayHello()" é um método de tipo "Unit" que imprime uma mensagem de saudação. A mensagem de saudação inclui a origem do tigre.
+<br>
+</p>
+
+<p>
+Classe SiberianTiger
+A classe SiberianTiger é uma classe que herda da classe Tiger. Ela tem um construtor que passa o valor "Siberia" para o atributo "origin" da classe Tiger.
+<br>
+</p>
+
+<p>
+Função "main()"
+A função "main()" é a função principal do programa. Ela cria um objeto da classe SiberianTiger e chama o método "sayHello()" desse objeto.
+<br>
+</p>
+
+<p>
+Saída:
+A saída do programa é a seguinte mensagem:<br>
+"A tiger from Siberia says: grrhhhh!"
+</p>
+
+<p>
+Explicação
+
+O código funciona da seguinte forma:
+
+* A classe Tiger é declarada como uma classe aberta. Isso significa que ela pode ser herdada por outras classes.
+* A classe SiberianTiger herda da classe Tiger.
+* O construtor da classe SiberianTiger passa o valor "Siberia" para o atributo "origin" da classe Tiger.
+* A função "main()" cria um objeto da classe SiberianTiger.
+* O método "sayHello()" do objeto SiberianTiger é chamado.
+* O método "sayHello()" imprime a mensagem de saudação.
+
+
+
+
 </body>
 </html>
