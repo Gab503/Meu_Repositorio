@@ -34,5 +34,6 @@
     }
     
     // Saída: Wif Wif!
+<p>A herança entre classes é declarada por dois pontos ( : ). Para tornar uma classe herdável, marque-a como open.</p>
 </body>
 </html>
