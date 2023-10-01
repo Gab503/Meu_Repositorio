@@ -8,7 +8,7 @@
 </head>
 <body>
   <h1>Formatos de imagens JPEG e PNG</h1>
-  <p> Baixe o Gimp<a href="https://www.gimp.org/" target="_blank">clicando aqui</a>, o gimp é um editor de imagens gratuito. </p>
+  <p> Baixe o Gimp <a href="https://www.gimp.org/" target="_blank">clicando aqui</a>, o gimp é um editor de imagens gratuito. </p>
   <p>O formato JPEG compacta a imagem, vale lembrar que quanto maior a imagem mais pesado ela é, isto é, maior o arquivo, mais difícil para carregar e colocar na internet, por isso o JPEG é essencial, este formato compacta as imagens.</p>
 
   <p>Curiosidade, o formato PNG foi criado pela mesma empresa do HTML.<br>Foi criado para substituir o formato Gif, que pemite transparência e animação. Já o PNG permite apenas transparência, sua principal vantagem é sua alta compactuação, não tanto quanto a JPEG, mas com a transparência.</p>
