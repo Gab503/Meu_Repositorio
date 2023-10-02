@@ -31,3 +31,18 @@ A integridade dos dados pode ser comprometida de várias maneiras diferentes. H�
  * Falhas no sistema.
 
 Em muitas empresas o armazenamento de dados e a sua integridade é feita por uma equipe de engenharia de dados se encarrega destas questões.
+
+* Também é importante verificar se os dados que você está usando, estão alinhados com o objetivo de negócios.
+  Isso adiciona outra camada à manutenção da integridade dos dados, porque os dados que você está usando podem ter limitações com as quais você precisará lidar.
+
+* Cuidado para não haver Dados duplicados
+* Verifique se há dados suficientes para análise.
+
+Como uma analista de dados, o alinhamento é algo que você precisará julgar. Um bom alinhamento significa que os dados são relevantes e podem ajudá-lo a resolver um problema de negócios ou determinar um curso de ação para atingir um determinado objetivo de negócios. 
+
+* Quando há dados limpos e um bom alinhamento, você pode obter insights precisos e tirar conclusões que os dados suportam.
+
+* Se houver um bom alinhamento, mas os dados precisarem ser limpos, limpe os dados antes de realizar sua análise.
+
+* Se os dados estiverem apenas parcialmente alinhados com um objetivo, pense em como você pode modificar o objetivo ou use restrições de dados para garantir que o subconjunto de dados se alinhe melhor ao objetivo de negócios.
+
