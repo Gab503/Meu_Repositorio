@@ -1,3 +1,33 @@
+**Pontos Essenciais:**
+
+1. **Coleta de Dados:**
+   - Essencial entender como coletar dados relevantes para o trabalho.
+   - Dados podem ser primários (obtidos internamente) ou de terceiros (adquiridos externamente).
+   - Verificar a precisão, confiabilidade e credibilidade dos dados é crucial.
+
+2. **Tipos de Dados:**
+   - Diferenciar entre dados qualitativos e quantitativos é fundamental.
+   - Dados qualitativos incluem dados discretos (contáveis) e contínuos (em uma escala contínua).
+   - Dados qualitativos abrangem dados nominais (sem ordem) e ordinais (com ordem definida).
+
+3. **Imparcialidade de Dados:**
+   - Reconhecer o viés nos dados é crucial. Viés pode ser consciente ou subconsciente.
+   - O viés de dados distorce sistematicamente os resultados em uma direção.
+   - É importante considerar a imparcialidade desde a coleta até a apresentação dos resultados.
+
+4. **Viés de Amostragem:**
+   - O viés de amostragem ocorre quando a amostra não é representativa da população.
+   - Amostragem aleatória ajuda a evitar o viés de amostragem.
+   - A visualização dos resultados pode ajudar a identificar o viés.
+
+5. **Viés do Observador / Viés de Interpretação:**
+   - Diferentes pessoas podem observar e interpretar dados de maneira diferente.
+   - É importante reconhecer que a subjetividade pode afetar a interpretação dos resultados.
+
+6. **Dados Não Enviesados:**
+   - Trabalhar com dados não enviesados é essencial para obter análises confiáveis e resultados precisos.
+
+
 # Preparar os dados para exploração
 
 ## Determinar quais dados coletar
