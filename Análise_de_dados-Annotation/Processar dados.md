@@ -46,3 +46,46 @@ Como uma analista de dados, o alinhamento é algo que você precisará julgar. U
 
 * Se os dados estiverem apenas parcialmente alinhados com um objetivo, pense em como você pode modificar o objetivo ou use restrições de dados para garantir que o subconjunto de dados se alinhe melhor ao objetivo de negócios.
 
+# Como lidar com a insuficiência de dados
+#### Diferentes tippos de dados insuficientes:
+
+* Dados de apenas uma fonte.
+
+* Dados que continuam atualizando.
+
+* Dados desatualizados.
+
+* Dados geograficamente limitados.
+
+#### Maneiras de lidar com estes dados insuficiente:
+
+* Identificar tendências com os dados disponíveis.
+
+* Esperar por mais dados se o tempo permitir.
+
+* Conversar com as partes interessadas e ajustar seu objetivo
+
+* Procurar um novo conjunto de dados.
+
+#### Falta de dados: 
+* Colete os dados em pequena escala para realizar uma análise preliminar e, em seguida, solicite mais tempo para concluir a análise depois de coletar mais dados.
+
+* Se não houver tempo para coletar dados, realize a análise usando dados de proxy de outros conjuntos de dados. Esta é a solução mais comum.
+
+#### Muito poucos dados:
+* Faça a análise usando dados de proxy junto com dados reais.
+
+* Ajuste sua análise para alinhar com os dados que você já possui.
+
+#### Dados errados, incluindo dados com erros:
+* Se você tiver os dados errados porque os requisitos foram mal compreendidos, comunique os requesitos novamente.
+
+* Identifique erros nos dados e, se possível, corrija-os na origem, procurando um padrão nos erros.
+
+* Se você não puder corrigir os erros de dados sozinho, poderá ignorar os dados errados e prosseguir com a análise se o tamanho da amostra ainda for grande o suficiente e ignorar os dados não causará viés sistemático.
+
+  ##### Observação: Às vezes, dados com erros podem ser um sinal de alerta de que os dados não são confiáveis.
+
+  # A importância do tamnho da amostra:
+
+  * População em análise de dados: São todos os valores de dados possíveisem um determinado conjunto de dados. 
