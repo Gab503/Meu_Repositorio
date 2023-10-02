@@ -31,3 +31,4 @@ A integridade dos dados pode ser comprometida de várias maneiras diferentes. H�
  * Falhas no sistema.
 
 Em muitas empresas o armazenamento de dados e a sua integridade é feita por uma equipe de engenharia de dados se encarrega destas questões.
+
