@@ -29,6 +29,6 @@
 
 <p>Neste exemplo acima, você deve ter observado que possuem os mesmo items em ordens diferentes. Isto é, estruturalmente, possuem os mesmos valores, mas, possuem referencias diferentes (ordem diferentes = referencias diferentes). </p>
 
-<p>Podemos pensar assim, uma comparação estrutural, é para saber se possuem os mesmo elementos. <br>Já uma comparação referencial ( eu associe com a Função Referencial da linguagem, de português, não de programação) é para ver se ambos são de fatos iguais, isto é, identicos.</p>
+<p>Podemos pensar assim, uma comparação estrutural, é para saber se possuem os mesmo elementos. <br>Já uma comparação referencial é para ver se ambos são de fatos iguais, isto é, identicos.</p>
 </body>
 </html>
