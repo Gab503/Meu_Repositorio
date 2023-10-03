@@ -10,7 +10,7 @@
     <h1>Funções de Escopo</h1>
     <h2>Let</h2>
 
-    <p>A função let em Kotlin é uma função de escopo que permite executar um bloco de código com um objeto como contexto. O resultado do bloco de código é o valor retornado pela função let.<br>
+ <p>A função let em Kotlin é uma função de escopo que permite executar um bloco de código com um objeto como contexto. O resultado do bloco de código é o valor retornado pela função let.<br>
     O argumento da função let é o objeto que será usado como contexto. O nome do argumento é it, mas pode ser nomeado de outra forma.
      O bloco de código é executado com o objeto como contexto. O objeto pode ser acessado usando o nome do argumento it.<br> 
     O resultado do bloco de código é o valor retornado pela função let.<br>Em geral, a função let é uma maneira conveniente de executar um bloco de código com um objeto como contexto. Pode ser usada para vários fins, incluindo validação, operações e transformações.</p>
@@ -52,22 +52,22 @@
         
     }
 
-    <p>Função customPrint():<br>
+  <p>Função customPrint():<br>
     Esta função pega uma string como parâmetro e imprime a versão em maiúsculas da string.
     <br>
     Função let():<br>
         
-    A função let() é uma função de escopo que permite executar um bloco de código com um objeto como contexto. O resultado do bloco de código é o valor retornado pela função let().
+  A função let() é uma função de escopo que permite executar um bloco de código com um objeto como contexto. O resultado do bloco de código é o valor retornado pela função let().
         
-    Chamada da função let() na função main():
+  Chamada da função let() na função main():
         
-    A primeira chamada da função let() na função main() é usada para imprimir a string "test" em maiúsculas e verificar se ela está vazia. O resultado da verificação de vazio é retornado pela função let().
+ A primeira chamada da função let() na função main() é usada para imprimir a string "test" em maiúsculas e verificar se ela está vazia. O resultado da verificação de vazio é retornado pela função let().
         
-     A segunda chamada da função let() na função main() é usada para imprimir a string "my string" em maiúsculas, se ela não for nula.
+  A segunda chamada da função let() na função main() é usada para imprimir a string "my string" em maiúsculas, se ela não for nula.
         
-     A terceira chamada da função let() na função main() é usada para imprimir a string "First : Second", se ambas as strings forem não nulas.
+ A terceira chamada da função let() na função main() é usada para imprimir a string "First : Second", se ambas as strings forem não nulas.
         
-    Saída do programa:<br>        
+  Saída do programa:<br>        
     TEST is empty: false<br>
     Printing "null":<br>
     Printing "my string":<br>
