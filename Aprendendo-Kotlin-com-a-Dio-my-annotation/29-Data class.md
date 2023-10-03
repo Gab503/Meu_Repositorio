@@ -5,9 +5,9 @@
     // se são iguais ou não
     override fun equals(other: Any?) =
     other is User && other .id == this.id
-}
+     }
 
-fun main(){
+    fun main(){
     // criação do usuário Alex, com id 1 e sua impressão.
     val user = User ("Alex", 1)
     println(user)
@@ -35,7 +35,7 @@ fun main(){
     // copiar o User mudando o id
     println(user.copy(id = 3))
     
-    // pode acessar as propriedades por ordem de declaração do cosntrutor
+    // pode acessar as propriedades por ordem de declaração do construtor
     println("name = ${user.component1()}")
     println("id = ${user.component2()}")
     
@@ -59,4 +59,4 @@ fun main(){
     // name = Alex
     // id = 1
   
-}
+    }
