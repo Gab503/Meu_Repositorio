@@ -60,3 +60,23 @@
     // id = 1
   
     }
+
+Este código Kotlin demonstra o uso de uma data class. Uma data class é uma classe que fornece algumas funcionalidades básicas, como equals(), hashCode() e toString(), sem que o programador precise implementá-las.
+
+Explicação do código
+
+1.  Declaração da data class User com duas propriedades, nome e id.
+2.  Sobrescrita do método equals() para comparar dois objetos User apenas pelo id.
+3.   Criação do usuário Alex, com id 1.
+4.   Impressão do usuário Alex.
+5.   Criação de dois outros usuários, o secondUser e o thirdUser.
+6.   Comparação do usuário Alex com o secondUser. Como os dois usuários têm o mesmo id, o resultado é true.
+7.   Comparação do usuário Alex com o thirdUser. Como os dois usuários têm o id diferente, o resultado é false.
+8.   Impressão do hashcode do usuário Alex.
+9.   Impressão do hashcode do secondUser.
+10.  Impressão do hashcode do thirdUser.
+11.  Criação de uma cópia do usuário Alex.
+12.  Comparação do usuário Alex com a cópia. Como são objetos diferentes, o resultado é false.
+13.  Criação de uma cópia do usuário Alex, mas com o nome alterado para Max.
+14.  Criação de uma cópia do usuário Alex, mas com o id alterado para 3.
+15.  Impressão das propriedades name e id do usuário Alex.
