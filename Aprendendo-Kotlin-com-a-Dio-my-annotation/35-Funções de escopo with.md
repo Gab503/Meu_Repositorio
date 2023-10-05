@@ -13,8 +13,8 @@
 
     class Configuration(var host: String, var port: Int)
 
-fun main(){
-    val configuration = Configuration(host = "127.0.0.1", port = 9000)
+    fun main(){
+        val configuration = Configuration(host = "127.0.0.1", port = 9000)
     
     with(configuration){
         println("$host:$port")
@@ -22,7 +22,7 @@ fun main(){
     
     // instead of: 
     println("${configuration.host}:${configuration.port}")
-}
+     } 
 
 
 </body>
