@@ -26,7 +26,7 @@
         }
     }
 
-    <p>O código acima define uma classe de dados chamada Person com três propriedades: name, age e about. A classe de dados também tem dois construtores: um construtor primário que leva três parâmetros e um construtor secundário sem parâmetros.
+<p>O código acima define uma classe de dados chamada Person com três propriedades: name, age e about. A classe de dados também tem dois construtores: um construtor primário que leva três parâmetros e um construtor secundário sem parâmetros.
      A função writeCreationLog() imprime uma mensagem para o console informando que uma nova pessoa foi criada.
      A função main() cria uma nova instância da classe Person chamada jake com os valores fornecidos para as propriedades name, age e about.
     Em seguida, a função main() usa a função de escopo also para executar a função writeCreationLog() com o objeto jake como argumento. A função also recebe um bloco de código como argumento e executa o bloco de código dentro do contexto do objeto especificado.
