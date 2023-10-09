@@ -139,4 +139,3 @@ Pesquisadores que confiam em anáise de regressão, métodos estatísticos para 
 
 
 
->>>>>>> d6ae1d9c7ce197c364d5686f95c2a82e2808e424
