@@ -369,4 +369,19 @@ Os recursos de segurança podem ser desenvolvidos para impedir que usuários nã
 ### Segurança de dados:
  Segurança de dados trata-se de proteger os dados contra o acesso não autorizado ou a corrupção por meio da adoção de medidas de segurança; Independentemente do programa de planilhas que você use, ele apresentará medidas de segurança semelhantes integradas. 
 
+## O poder estatístico:
+O poder estatístico é a probabilidade de obter resultados significativos de um teste. 
+
+* O teste de hipóteses é uma meneira de ver se uma pesquisa ou experimento tem resultados significativos. Normalmente, quanto maior o tamanho da amostra, maior a chance de você obter resultados estatisticamente significativos com seu teste.
+
+Se seu poder estatístico for 0,6 é a mesma coisa que dizer 60%. 
+
+O termo "estatisticamente significativo" é usado em estatísticas. Em termos básicos, se um teste é estatisticamente significativo, significa que os resultados do teste são reais e não um  erro causado por acaso.  
+
+* Normalmente, você precisa de um poder estatísco de pelo menos 0,8 ou 80% para considerar seus resultados estatiscamente significativos.
+
+* O poder estatísco pode ser calculado e relatado para um experimento completo para comentar sobre a confiança que se pode ter nas concçusões extraídas dos resultados do estudo, Também pode ser usado como uma ferramenta para estimar o número de observações ou o tamanho da amostra necessãria para detectar um efeito em um experimento.
+
+  
+
 
