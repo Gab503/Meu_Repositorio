@@ -32,8 +32,7 @@ A integridade dos dados pode ser comprometida de várias maneiras diferentes. H�
 
 Em muitas empresas o armazenamento de dados e a sua integridade é feita por uma equipe de engenharia de dados se encarrega destas questões.
 
-<<<<<<< HEAD
-=======
+
 * Também é importante verificar se os dados que você está usando, estão alinhados com o objetivo de negócios.
   Isso adiciona outra camada à manutenção da integridade dos dados, porque os dados que você está usando podem ter limitações com as quais você precisará lidar.
 
@@ -88,7 +87,7 @@ Como uma analista de dados, o alinhamento é algo que você precisará julgar. U
 
   ##### Observação: Às vezes, dados com erros podem ser um sinal de alerta de que os dados não são confiáveis.
 
-  # A importância do tamnho da amostra:
+  # A importância do tamanho da amostra:
 * População em análise de dados: São todos os valores de dados possíveisem um determinado conjunto de dados.
 
  Se você poder usar 100 % de uma população em sua análise, será ótimo. Mas, nem sempre será possível coletar informações sobre uma população inteira. Demanda muito tempo e é caro.
@@ -137,5 +136,70 @@ As empresas geralmente criam tamanhos das amostras antes da análise de dados pa
  Esta recomendação é baseada no Teorema do limite Central (CLT) no campo da probabilidade e estatística. Conforme o tamanho da amostra aumenta, os resultados se assemelham mais à distribuição normal de um grande número de amostras. Uma amostra de 30 é o menor tamanho da amostra o qual o CLT ( não confundir com carteira assinada) ainda é válido.
 Pesquisadores que confiam em anáise de regressão, métodos estatísticos para determinar as relações entre variáveis controladas e dependentes também preferem uma amostra mínima de 30.
 
+
+## O poder estatístico:
+O poder estatístico é a probabilidade de obter resultados significativos de um teste. 
+
+* O teste de hipóteses é uma meneira de ver se uma pesquisa ou experimento tem resultados significativos. Normalmente, quanto maior o tamanho da amostra, maior a chance de você obter resultados estatisticamente significativos com seu teste.
+
+Se seu poder estatístico for 0,6 é a mesma coisa que dizer 60%. 
+
+O termo "estatisticamente significativo" é usado em estatísticas. Em termos básicos, se um teste é estatisticamente significativo, significa que os resultados do teste são reais e não um  erro causado por acaso.  
+
+* Normalmente, você precisa de um poder estatísco de pelo menos 0,8 ou 80% para considerar seus resultados estatiscamente significativos.
+
+* O poder estatísco pode ser calculado e relatado para um experimento completo para comentar sobre a confiança que se pode ter nas concçusões extraídas dos resultados do estudo, Também pode ser usado como uma ferramenta para estimar o número de observações ou o tamanho da amostra necessãria para detectar um efeito em um experimento.
+
+  
+## Como determinar o melhor tamanho da amostra.
+Relembrando, uma amostra é uma parte de uma população que é representativa da população.
+Pode ser tanto caro como levar muito tempo para analisar uma população inteira de dados. Usar o tamamho da amostra geralmente faz mais sentido e ainda pode levar a descobertas úteis. Existem calculadoras úteis online que podem ajudá-lo a encontrar o tamanho da amostra. 
+
+Você precisa inserir o nível de confiança, o tamanho da população e a margem de erro. 
+
+* O nível de confiança é a probabilidade de que sua amostra reflita com precisão a população maior. Você pode pensar nisso da mesma forma que a confiança em qualquer outra coisa. É o quão forte você sente que pode confiar em algo ou alguêm. Ter um nível de confiança de 99% é o ideal. Mas a maioria das indústrias espera um nível de confiança de pelo menos de 90% ou 95%.
+
+Em outros estudos, as organizações podem precisar apenas saber que os resultados do teste ou da pesquisa os levam na direção certa. Por exemplo, se uma empresa de tintas estiver testando novas cores, um nível de confiança mais baixo é suficiente. 
+
+* Você também deve considerar a margem de erro para seu estudo. Basicamente informa o quão próximos os resultados do tamanho da amostra estão do que seus resultados seriam se você usasse toda a população que o tamanho da amostra representa.
+  
+Por exemplo, digamos que o diretor de uma escola de ensino médio se aproxime de você com um estudo sobre as preferências de doces dos alunos. Eles precisam saber um tamanho da amostra adequado e precisam disso agora. A escola tem uma população de 500 alunos, e eles estão pedindo um nível de confiança de 95% e uma margem de erro de 5%. Configuramos uma calculadora em uma planilha, mas você também pode encontrar facilmente esse tipo de calculadora pesquisando "Calculadora de tamanho da amostra" na internet. Assim como essas calculadoras, a calculadora da planilha não mostra nenhum dos cálculos mais complexos para descobrir o tamanho da amostra, tudo o que precisa fazer é inserir os números para a população, nível de confiança e margem de erro. 
+E quando digitamos 500 para o tamanho da população, 95 para a porcentagem de nível de confiança, 5 porcento para margem de erro, o resultado é cerca de 218. Isso significa que para este estudo, um tamanho da amostra apropriada seira 218. 
+
+Se fizermos uma pesquisa com 218 alunos e descobrirmos que 55% deles prederem chocolate, poderíamos estar bastante confiante de que isso seria verdade para todos os 500 alunos. 218 é o número mínimo de pessoas que precisamos pesquisar com base em nossos critérios de nível de confiança de 95% e margem de erro de 5%.
+
+* O nível de confiança e a margem de erro não precisam corresponder a 100%. Eles são independentes um do outro. Então digamos que mudamos nossa margem de erro de 5% para 3%.
+Então descrobimos que nosso tamanho da amostra precisaria ser maior, cerca de 341 em vez de 218, para tornar os resultados do estudo mais representativos da população.
+
+* Taxa de resposta estimada: Se você estiver realizando uma pesquisa com indivíduos, essa é a porcentagem de pessoas que você espera que preencham sua pesquisa entre aquelas que receberam a pesquisa.
+
+
+### Como avaliar a confiabilidade dos dados
+Como analista de dados, é importante descobrir o tamanho da amostra e variáveis como nível de confiança e margem de erro antes de executar qualquer tipo de teste ou pesquisa. É a melhor maneira de garantir que seus resultados sejam objetivos e oferece uma chance melhor de obter resultados estatisticamente significativos.
+
+Mas se você já conhece o tamanho da amostra, como quando recebe os resultados da pesquisa para analisar, pode calcular a margem de erro por conta própria. Assim, terá uma ideia melhor de quanta diferença existe entre sua amostra e su população.
+
+A margem de erro é o máximo que se espera que os resultados da amostra sejam diferentes daqueles da população real.
+Seria ótimo pesquisar ou testar uma população inteira, mas geralmente é impossível fazer isso. Em vez disso, pegamos uma amostra da população maior. Com base no tamanho da amostra, a margem de erro resultante podem ser comparados aos resultados se tivéssemos pesquisado toda a população. A margem de erro ajuda você a entender o quão confiáveis são os dados do seu teste de hipóteses. 
+
+Quanto mais próximo de zero a margem erro for, mais próximos os resultados de sua amostra corresponderiam aos resultados da população geral. 
+
+Por exemplo: Digamos que você tenha completado uma pesquisa nacional usando uma amostra da população. Você perguntou às pessoas que trabalham cinco dias por semana se ela gostam da ideia de uma semana de trabalho de quatro dias. Portanto, sua pesquisa informa que 60% preferem uma semana de trabalho de quatro dias. A margem de erro foi de 10% o que nos diz que entre 50 e 70% gostaram da ideia.
+
+Então, se fizéssemos uma pesquisa com todos os trabalhadores de cinco dias em todo o país, entre 50 e 70% concordaria com nossos resultados. Lembre-se que nosso alcance está entre 50 e 70%. Isso porque a margem de erro é contada nos dois sentidos a partir dos resultados da pesquisa de 60%.
+
+Se você configurar um nível de confiança de 95% para sua pesquisa, haverá uma chance de 95% de que as respostas de toda a população caiam entre 50 e 70% dizendo sim, eles querem uma semana de trabalho de quatro dias. 
+Como a margem de erro se sobrepões a essa marca de 50%, você não pode dizer com certeza que o público gosta da ideia de uma semana de trabalho de quatro dias. Nesse caso, você teria que dizer que sua pesquisa foi inconclusiva.
+
+Agora, se você quisesse uma amostra de erro menor, digamos de 5%, com um intervalo entre 55 e 65%, você poderia aumentar o tamanho da amostra. Mas se você já recebeu o tamanho da amostra, você mesmo pode calcular a margem de erro. Assim, você pode decidir por si mesmo qual a chance de seus resultados serem estatiscamente significativos com base em sua margem de erro. Em geral, quanto mais pessoas você incluir em sua pesquisa, maior a probabilidade de sua amostra ser representativa de toda a população. 
+
+Diminuir o nível de confiança também teria o mesmo efeito, mas também tornaria menos provável que sua pesquisa seja precisa. Portanto, para calcular a margem de erro, você precisa de três coisas:
+1. Tamanho da população.
+2. Tamanho da amostra.
+3. Nível de confiança.
+
+* E assim como no tamanho da amostra, você pode encontrar muitas calculadoras online pesquisando "calculadora de margem de erro".
+
+  
 
 
