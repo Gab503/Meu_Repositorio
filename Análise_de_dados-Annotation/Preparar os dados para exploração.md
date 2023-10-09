@@ -403,4 +403,33 @@ Se fizermos uma pesquisa com 218 alunos e descobrirmos que 55% deles prederem ch
 * O nível de confiança e a margem de erro não precisam corresponder a 100%. Eles são independentes um do outro. Então digamos que mudamos nossa margem de erro de 5% para 3%.
 Então descrobimos que nosso tamanho da amostra precisaria ser maior, cerca de 341 em vez de 218, para tornar os resultados do estudo mais representativos da população.
 
+* Taxa de resposta estimada: Se você estiver realizando uma pesquisa com indivíduos, essa é a porcentagem de pessoas que você espera que preencham sua pesquisa entre aquelas que receberam a pesquisa.
 
+
+### Como avaliar a confiabilidade dos dados
+Como analista de dados, é importante descobrir o tamanho da amostra e variáveis como nível de confiança e margem de erro antes de executar qualquer tipo de teste ou pesquisa. É a melhor maneira de garantir que seus resultados sejam objetivos e oferece uma chance melhor de obter resultados estatisticamente significativos.
+
+Mas se você já conhece o tamanho da amostra, como quando recebe os resultados da pesquisa para analisar, pode calcular a margem de erro por conta própria. Assim, terá uma ideia melhor de quanta diferença existe entre sua amostra e su população.
+
+A margem de erro é o máximo que se espera que os resultados da amostra sejam diferentes daqueles da população real.
+Seria ótimo pesquisar ou testar uma população inteira, mas geralmente é impossível fazer isso. Em vez disso, pegamos uma amostra da população maior. Com base no tamanho da amostra, a margem de erro resultante podem ser comparados aos resultados se tivéssemos pesquisado toda a população. A margem de erro ajuda você a entender o quão confiáveis são os dados do seu teste de hipóteses. 
+
+Quanto mais próximo de zero a margem erro for, mais próximos os resultados de sua amostra corresponderiam aos resultados da população geral. 
+
+Por exemplo: Digamos que você tenha completado uma pesquisa nacional usando uma amostra da população. Você perguntou às pessoas que trabalham cinco dias por semana se ela gostam da ideia de uma semana de trabalho de quatro dias. Portanto, sua pesquisa informa que 60% preferem uma semana de trabalho de quatro dias. A margem de erro foi de 10% o que nos diz que entre 50 e 70% gostaram da ideia.
+
+Então, se fizéssemos uma pesquisa com todos os trabalhadores de cinco dias em todo o país, entre 50 e 70% concordaria com nossos resultados. Lembre-se que nosso alcance está entre 50 e 70%. Isso porque a margem de erro é contada nos dois sentidos a partir dos resultados da pesquisa de 60%.
+
+Se você configurar um nível de confiança de 95% para sua pesquisa, haverá uma chance de 95% de que as respostas de toda a população caiam entre 50 e 70% dizendo sim, eles querem uma semana de trabalho de quatro dias. 
+Como a margem de erro se sobrepões a essa marca de 50%, você não pode dizer com certeza que o público gosta da ideia de uma semana de trabalho de quatro dias. Nesse caso, você teria que dizer que sua pesquisa foi inconclusiva.
+
+Agora, se você quisesse uma amostra de erro menor, digamos de 5%, com um intervalo entre 55 e 65%, você poderia aumentar o tamanho da amostra. Mas se você já recebeu o tamanho da amostra, você mesmo pode calcular a margem de erro. Assim, você pode decidir por si mesmo qual a chance de seus resultados serem estatiscamente significativos com base em sua margem de erro. Em geral, quanto mais pessoas você incluir em sua pesquisa, maior a probabilidade de sua amostra ser representativa de toda a população. 
+
+Diminuir o nível de confiança também teria o mesmo efeito, mas também tornaria menos provável que sua pesquisa seja precisa. Portanto, para calcular a margem de erro, você precisa de três coisas:
+1. Tamanho da população.
+2. Tamanho da amostra.
+3. Nível de confiança.
+
+* E assim como no tamanho da amostra, você pode encontrar muitas calculadoras online pesquisando "calculadora de margem de erro".
+
+  
