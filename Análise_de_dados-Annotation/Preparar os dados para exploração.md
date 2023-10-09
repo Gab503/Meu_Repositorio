@@ -383,5 +383,21 @@ O termo "estatisticamente significativo" é usado em estatísticas. Em termos b�
 * O poder estatísco pode ser calculado e relatado para um experimento completo para comentar sobre a confiança que se pode ter nas concçusões extraídas dos resultados do estudo, Também pode ser usado como uma ferramenta para estimar o número de observações ou o tamanho da amostra necessãria para detectar um efeito em um experimento.
 
   
+## Como determinar o melhor tamanho da amostra.
+Relembrando, uma amostra é uma parte de uma população que é representativa da população.
+Pode ser tanto caro como levar muito tempo para analisar uma população inteira de dados. Usar o tamamho da amostra geralmente faz mais sentido e ainda pode levar a descobertas úteis. Existem calculadoras úteis online que podem ajudá-lo a encontrar o tamanho da amostra. 
+
+Você precisa inserir o nível de confiança, o tamanho da população e a margem de erro. 
+
+* O nível de confiança é a probabilidade de que sua amostra reflita com precisão a população maior. Você pode pensar nisso da mesma forma que a confiança em qualquer outra coisa. É o quão forte você sente que pode confiar em algo ou alguêm. Ter um nível de confiança de 99% é o ideal. Mas a maioria das indústrias espera um nível de confiança de pelo menos de 90% ou 95%.
+
+Em outros estudos, as organizações podem precisar apenas saber que os resultados do teste ou da pesquisa os levam na direção certa. Por exemplo, se uma empresa de tintas estiver testando novas cores, um nível de confiança mais baixo é suficiente. 
+
+* Você também deve considerar a margem de erro para seu estudo. Basicamente informa o quão próximos os resultados do tamanho da amostra estão do que seus resultados seriam se você usasse toda a população que o tamanho da amostra representa.
+  
+Por exemplo, digamos que o diretor de uma escola de ensino médio se aproxime de você com um estudo sobre as preferências de doces dos alunos. Eles precisam saber um tamanho da amostra adequado e precisam disso agora. A escola tem uma população de 500 alunos, e eles estão pedindo um nível de confiança de 95% e uma margem de erro de 5%. Configuramos uma calculadora em uma planilha, mas você também pode encontrar facilmente esse tipo de calculadora pesquisando "Calculadora de tamanho da amostra" na internet. Assim como essas calculadoras, a calculadora da planilha não mostra nenhum dos cálculos mais complexos para descobrir o tamanho da amostra, tudo o que precisa fazer é inserir os números para a população, nível de confiança e margem de erro. 
+E quando digitamos 500 para o tamanho da população, 95 para a porcentagem de nível de confiança, 5 porcento para margem de erro, o resultado é cerca de 218. Isso significa que para este estudo, um tamanho da amostra apropriada seira 218. 
+
+
 
 
