@@ -398,6 +398,9 @@ Em outros estudos, as organizações podem precisar apenas saber que os resultad
 Por exemplo, digamos que o diretor de uma escola de ensino médio se aproxime de você com um estudo sobre as preferências de doces dos alunos. Eles precisam saber um tamanho da amostra adequado e precisam disso agora. A escola tem uma população de 500 alunos, e eles estão pedindo um nível de confiança de 95% e uma margem de erro de 5%. Configuramos uma calculadora em uma planilha, mas você também pode encontrar facilmente esse tipo de calculadora pesquisando "Calculadora de tamanho da amostra" na internet. Assim como essas calculadoras, a calculadora da planilha não mostra nenhum dos cálculos mais complexos para descobrir o tamanho da amostra, tudo o que precisa fazer é inserir os números para a população, nível de confiança e margem de erro. 
 E quando digitamos 500 para o tamanho da população, 95 para a porcentagem de nível de confiança, 5 porcento para margem de erro, o resultado é cerca de 218. Isso significa que para este estudo, um tamanho da amostra apropriada seira 218. 
 
+Se fizermos uma pesquisa com 218 alunos e descobrirmos que 55% deles prederem chocolate, poderíamos estar bastante confiante de que isso seria verdade para todos os 500 alunos. 218 é o número mínimo de pessoas que precisamos pesquisar com base em nossos critérios de nível de confiança de 95% e margem de erro de 5%.
 
+* O nível de confiança e a margem de erro não precisam corresponder a 100%. Eles são independentes um do outro. Então digamos que mudamos nossa margem de erro de 5% para 3%.
+Então descrobimos que nosso tamanho da amostra precisaria ser maior, cerca de 341 em vez de 218, para tornar os resultados do estudo mais representativos da população.
 
 
