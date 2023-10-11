@@ -65,5 +65,12 @@ No mundo do C, você não pode ter apenas variáveis. Você tem que dizer ao com
 
 E a convenção para fazer isso é você escrever literalmente o nome do tipo que você quer. Em seguida você escreve o nome da variável. E então, novamente, ára atribuir um valor a essa variável da direita para a esquerda, temos que usar o sinal de igual. 
 
+Podemos fazer algo com o valor de retorno ou output da pesqunta.
 
 
+    string answer = get_string("What's your name ?");
+    printf(" Hello %s", answer);
+
+* %s Isto é o que chamamos de formato de código, portanto o f em print. O printf não apenas imprime coisas. Ele também pode imprimir códigos de formato. E isto é apenas uma sintexe extravagante dizendo "coloque algum valo aqui". o s, é uma string. Se você usar uma vírgula no meio de parênteses como argumentos ou inputs para uma função, ou seja, separando o que há na esquerda do que está à direita.
+
+* 
