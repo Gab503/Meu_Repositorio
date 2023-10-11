@@ -26,15 +26,44 @@ Agora para executar o programa em Hello.c você precisa digitar um comando difer
 
 Que é como dizer: Vá na pasta atual do computador que estou usando e procure por um programa chamado "Hello".  Após isso basta digitar enter e que executará o programa.
 
-* Uma função é como um miniprograma. É uma ação ou um verbo que você pode usar ao escrever seu próprio programa que faz algo. No scratc há por exemplo Say (dizer).
+*  Uma função é como um miniprograma. É uma ação ou um verbo que você pode usar ao escrever seu próprio programa que faz algo. No scratc há por exemplo Say (dizer).
 As funções também podem ter inputs, re-chamadas. Agora, vamos começar chamando inputs para argumentos de funções por assim dizer. Outro termo para isso é parâmetros. Mas são sinônimos. Os argumentos são as inputs para as funções.
 
 No scratch, por exemplo, Say Hello World
 
-Em c, printf("Hello World")
+* Em c, printf("Hello World")
 
+printf é para imprimir algo formatado. 
 
+* Repare que em C, há parênteses abertos e parênteses fechados. No meio desses parênteses estarão os inputs dessa função printf, também conhecidos como argumentos.
 
+* Também à necessidade de acrescentar aspas duplas à esquerda e à direita.
+
+* E também tem que acrescentar um ponto e vírgula ao final.
+
+* As funções são apenas uma versão programada de um algoritmo, a implementação de um algoritmo em código, em software. Assim, uma função pode ser representada como sendo a tomada de inputs conhecida de outra forma como argumentos. Mas as funções podem fazer pelo menos dois tipos diferentes de coisas no mundo da programação.
+Quando uma função recebe inputs, ou seja, argumentos, funções podem ter o que se chama efeitos colaterais.
+
+* No scratch, quando usamos o bloco "Say" ele retornou um output. Mais tecnicamente tinha um efeito colateral. Quando usou o bloco say ou printf, apareceu algo na tela, ou melhor, teve um efeito colateral.
+Portanto, um efeito colateral de uma função é frequentemente algo visual que acontece na tela, como texto ou áudio.
+
+* Há outra característica de funções, conhecida como return values, onde uma função pode realmente devolver um valor. Vai apenas devolver para você de uma forma que você, o programador, pode reutilizar qual seja o output dessa função idealmente, armazenando em uma variável. Assim como um matemático armazenaria um número em uma variável, como X ou Y, ou Z.
+
+* Bibliotecas: Uma biblioteca é um código que outra pessoa escreveu. A que será usada é chamada CS50.
+
+      string answer = get_string( " What's your name ?");
+
+  
+* String: No mundo da programação, uma string é um texto.
+
+* get_string é uma função que vai fornecer a você inputs. Perceba, por parêntes em C, ele pode rebecer entrada. A entrada / input será "What's your name ?".
+
+* Como na maioria das linguagens, se você quiser que algo seja armazenado em uma variável, você mesmo tem que fazer isso.
+Para fazer isso, você simplesmente inventa o nome da variável que você deseja, seja X ou Y ouZ, ou de forma mais convincente, "aswer", e você usa um sinal de igual. E mesmo que em matemática isso geralmente implique igualdade, no contexto do C e na maioria das linguagens de programação, o sinal de igualdade na verdade significa o que chamaremos de atribuição. Significa, efetivamente, copiar o que estiver à direita no quer que esteja à esquerda. Portanto, se do lado direito houver uma função cujo propósito é perguntar a uma pessoa seu nome, esse nome vai ser copiado da direita para a esquerda para esta variável chamada resposta.
+
+No mundo do C, você não pode ter apenas variáveis. Você tem que dizer ao computador, antecipadamente, que tipo de variável você deseja. Neste caso, uma string. 
+
+E a convenção para fazer isso é você escrever literalmente o nome do tipo que você quer. Em seguida você escreve o nome da variável. E então, novamente, ára atribuir um valor a essa variável da direita para a esquerda, temos que usar o sinal de igual. 
 
 
 
