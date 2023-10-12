@@ -69,8 +69,30 @@ Podemos fazer algo com o valor de retorno ou output da pesqunta.
 
 
     string answer = get_string("What's your name ?");
-    printf(" Hello %s", answer);
+    printf(" Hello %s\n",answer);
 
-* %s Isto é o que chamamos de formato de código, portanto o f em print. O printf não apenas imprime coisas. Ele também pode imprimir códigos de formato. E isto é apenas uma sintexe extravagante dizendo "coloque algum valo aqui". o s, é uma string. Se você usar uma vírgula no meio de parênteses como argumentos ou inputs para uma função, ou seja, separando o que há na esquerda do que está à direita.
+* %s Isto é o que chamamos de formato de código, portanto o f em print. O printf não apenas imprime coisas. Ele também pode imprimir códigos de formato. E isto é apenas uma sintexe extravagante dizendo "coloque algum valo aqui". o s, é uma string. Se você usar uma vírgula no meio de parênteses como argumentos ou inputs para uma função, ou seja, separando o que há na esquerda do que está à direita. Note que, a vírgula está fora das aspas duplas;
 
-* 
+* Lembre-se que, sempre que for alterar o código, não basta apenas salvar-lo, é preciso re-copilar. Usando neste caso, "make Hello". Isso acontece por causa da linguagem C, que é uma linguagem compilada e não interpretada.
+
+      int main(void)
+      {
+
+      }
+É assim que você começa a escrever um programa. Semelhante ao aberte a bandeira verde do scratch. 
+
+Header file: Arquivos de cabeçalho. Um termo técnico que se refere a um arquivo escrito na linguagem de programação C, cujo nome termina não com .c mas com .h
+
+ No scratch:
+
+         When (bandeira verde) clicked.
+         Say Hello World.
+
+ Em c:    
+
+         int main(void)
+         {
+             printf("Hello World");
+         }
+
+
