@@ -94,5 +94,24 @@ Header file: Arquivos de cabeçalho. Um termo técnico que se refere a um arquiv
          {
              printf("Hello World");
          }
+.
+
+          # include <cs50.h>
+          # include <stdio.h>
+
+          int main (void)
+          {
+              string answer = get_string("What's your name ?");
+              printf("Nice to meet you %s\n",answer);
+          }   
+
+
+         
+* #include <stdio.h> Se refere a um arquivo chamado stdio.h, que é for standard input output ponto h. É um acrônimo no mundo dos computadores que se refere apenas a entrada e saída. Assim, o io.h é apenas um arquivo muito popular que é usado em C e que dá a capacidade de obter input e output do usuário. E o faz fornecer o printf, por exemplo, que permite que você gere alguma forma de output atráves desses efeitos colaterais.
+
+* Para usar o get_string, acrescentamos um segundo arquivo de cabeçalho chamado CS50.h
+
+##### Portanto, estes arquivos de cabeçalho apenas dão acesso a mais funções do que você pode obter automaticamente da linguagem que você está usando, neste caso, C.
+
 
 
