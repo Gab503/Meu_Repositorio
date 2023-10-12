@@ -113,5 +113,14 @@ Header file: Arquivos de cabeçalho. Um termo técnico que se refere a um arquiv
 
 ##### Portanto, estes arquivos de cabeçalho apenas dão acesso a mais funções do que você pode obter automaticamente da linguagem que você está usando, neste caso, C.
 
+É normal cometer alguns erros quando se está iniciando seu aprendizado, como esquecer um ; no final do código, ou aspas, ou parêntes etc... Há algumas ferramentas que podem ajudar a lidar com esses erros:
+
+Qualquer umas das ferramentas cujos nomes terminam com 50 são especificamente orientadas para a educação, escritas pelo Staff da CS50, para treinamentos temporários que serem utilizadas neste curso.
+
+* help50: help50 é um comando para permitir que você esolva problemas que de outra forma você não poderia ver com clareza em seu próprio código. Ele ajuda a saber o que deu errado. 
+Para isso basta adicionar help50 antes do make dessa maneira:
+
+            help50 make Hello
 
 
+  
