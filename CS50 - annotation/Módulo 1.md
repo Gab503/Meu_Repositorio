@@ -122,5 +122,15 @@ Para isso basta adicionar help50 antes do make dessa maneira:
 
             help50 make Hello
 
+##### Lembre-se: Um bom código é correto, isto é, faz o que se espera que faça, possui design e estilo.
 
+* style50: Esta é outra ferramenta orientada para a educação que está instalada no CS50 IDE, que permite que você descubra como melhorar seu código. 
   
+Para adicionar comentários em c:
+
+            // This is a comment
+
+* Um bom comentário, explica o objetivo da linha ( ou linhas) de código. Mas lembre-se de sempre buscar que seu código seja auto-descritivo.
+
+* check50: Esta é uma ferramenta específica que vai verificar a exatidão de seu código. Então, enquanto help50 apenas ajuda você a compilar seu código normalmente, quando não está compilando nada, o style50 ajuda você a melhorar o estilo de seu código, check50 verificará a exatidão de seu código em alguns testes automatizados.
+
