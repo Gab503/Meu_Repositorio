@@ -134,3 +134,50 @@ Para adicionar comentários em c:
 
 * check50: Esta é uma ferramenta específica que vai verificar a exatidão de seu código. Então, enquanto help50 apenas ajuda você a compilar seu código normalmente, quando não está compilando nada, o style50 ajuda você a melhorar o estilo de seu código, check50 verificará a exatidão de seu código em alguns testes automatizados.
 
+A IDE CS50 é, na verdade como se fosse seu próprio servidor ou seu próprio computador na nuve. Na janela do terminal, pode ser feito muito mais coisas do que somente help50 ... Também é possível manipular os arquivos.
+
+* ls : É uma notação abreviada para listas. E simplesmente, ls lista os arquivos ou pastas em sua pasta atual. Você ter observado que Hello* está destacado e com um asterisco. E isso é apenas uma pista visual de que esse arquivo é executável. Ou seka, que esse é um programa que você pode rodar com ./Hello.
+
+* É possível renomear o arquivo dentro da janela do terminal.  Se quiser o remover digite:
+
+        $rm Hello
+        rm: remove regular file 'Hello' ? yes
+  Você pode olhar no canto esquerda onde se encontra seus arquivos, notará que o arquivo Hello foi removido, restando apenas Hello.c.
+
+* Para renomear:
+
+        mv Hello.c goodbye.c
+
+
+  * mv é o camando para mudar. Novamente no cante superior esquerdo, notará que o arquivo mudou de nome.
+ 
+Suponha que eu queira começar a organizar meus arquivos. Suponha que você queira criar uma pasta também conhecida como um diretório:
+
+        mkdir lecture
+
+* mkdir é o comando para cria um novo diretório. Após o comando digite o nome do diretório.
+
+* Para mover hello.c para no o diretório:
+
+        $ mv hello.c lecture/
+  Se digitar ls novamente, verá somente o nome da pasta.
+
+Semelhante a quando você quiser acessar uma arquivo que está dentro de uma pasta, primeiro você precisa acessar a pasta e depois o arquivo: 
+
+       $ cd lecture
+* cd é comando para acessar um diretório.
+
+Se digitar ls novamente verá:
+
+        lecture/ $ ls
+        $ hello.c
+
+Suponha que eu queira mudar hello.c para onde estava antes. 
+
+* Há uma notação curta para o que chamaremos de pastas dos pais. Assim como nas árvores genealógicas, há noção de pais e filhos, e netos, e assim por diante. Isso também é verdade em sistemas de informática que possuem pastas. E pastas dentro de pastas. Há uma hierarquia muito parecida com uma árvore genealógica.
+
+  Então, se eu quiser mover hello.c um nível acima, eu posso fazer:
+
+      $mv hello.c ..
+  
+O código acima significa, mova este arquivo para a pasta acima. 
