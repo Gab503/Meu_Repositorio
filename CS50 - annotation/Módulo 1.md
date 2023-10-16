@@ -219,5 +219,21 @@ no CS50 IDE também há:
 
 Mas acontece que cada um destes tipos de dados, como int e float, têm um número finito de bits. Cada um desses tipos de dados usa um número específico de bits. Int por exemplo, inteiros em C, usa apenas 32 bits. 
 
+Printf, tem a capacidade de imprimir não apenas strings, mas também diferentes formatos de códigos de outros tipos de dados também. 
+
+* %c Será o local a ser ocupado para impressão de um único caractere. Porcentagem c para char por assim dizer.
+  
+* %f  Vai ser para um valor de ponto flutuante. Portanto se você quiser imprimir um número real com um ponto decimal, você vai usar %f
+  
+* %i Se quiser imprimir um número inteiro, use %i. 
+  
+* %li Se você quiser imprimir um número inteiro longo, também conhecido como long, use %li
+  
+* %s Para imprimir strings
+  
+* ...
+
+
+
 
 
