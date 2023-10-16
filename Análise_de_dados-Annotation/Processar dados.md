@@ -203,3 +203,7 @@ Diminuir o nível de confiança também teria o mesmo efeito, mas também tornar
   
 Margem de erro é a quantidade máxima que se espera que os resultados da amostra sejam diferentes dos da população real. Mais tecnicamente, a margem de erro define um intervalo de valores abaixo e acima do resultado médio da amostra. Espera-se que o resultado médio para toda a população esteja dentro desse intervalo. 
 
+* Dados sujos podem ser o resultado de alguém digitando um pedaço de dado incorretamente; formatação inconsistente; campos em branco ou mesmo pedaços de dados sendo inseridos mais de uma vez, o que cria duplicatas.
+Dados sujos são dados incompletos, incorretos ou irrelevante para o problema que você está tentando resolver.
+
+* Dados limpos são dados que estão completos, corretos e são relevantes para o problema que você está tentando resolver. Quando você trabalha com dados limpos você vai perceber que seus projetos acontecem muito mais tranquilamente. 
