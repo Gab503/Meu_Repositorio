@@ -181,3 +181,43 @@ Suponha que eu queira mudar hello.c para onde estava antes.
       $mv hello.c ..
   
 O código acima significa, mova este arquivo para a pasta acima. 
+
+Como eu subo a mim mesmo um nível acima nessa árvore genealógica que são estas pastas ?
+
+       cd ..
+Isso vai mudar para o diretório principal. Ponto ponto significa apenas o principal, o primeiro, o "Pai". 
+
+Para remover o lecture não é o mesmo como removeu o Hello.c:
+
+       rmdir lecture
+
+* Para executar o hello.c usá-se ./hello pois assim como o ponto se refere ao ponto do seu diretório pai, um único ponto se refere a seu diretório atual.
+
+  Portanto, ponto barra (./) é apenas uma maneira explícita de dizer ao computador, execute o programa hello que está aqui mesmo em meu diretório atual.
+
+## Tipos de dados
+Já vimos as strings. Você pode ter não apenas strings de texto, mas que talvez sejam inteiros, como números, ou talvez valore de ponto flutuante como 3.14159, ou outros valores semelhantes. Você pode ter valore booleanos que são apenas True or False. Você pode ter caracteres ou chars, que são caracteres únicos. 
+
+* bool
+* char
+* double
+* float
+* int
+* long
+* string
+* ...
+
+no CS50 IDE também há:
+
+* get_char
+* get_double
+* get_float
+* get_int
+* get_long
+* get_string
+* ...
+
+Mas acontece que cada um destes tipos de dados, como int e float, têm um número finito de bits. Cada um desses tipos de dados usa um número específico de bits. Int por exemplo, inteiros em C, usa apenas 32 bits. 
+
+
+
