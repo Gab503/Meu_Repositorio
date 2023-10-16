@@ -201,5 +201,5 @@ Diminuir o nível de confiança também teria o mesmo efeito, mas também tornar
 * E assim como no tamanho da amostra, você pode encontrar muitas calculadoras online pesquisando "calculadora de margem de erro".
 
   
-
+Margem de erro é a quantidade máxima que se espera que os resultados da amostra sejam diferentes dos da população real. Mais tecnicamente, a margem de erro define um intervalo de valores abaixo e acima do resultado médio da amostra. Espera-se que o resultado médio para toda a população esteja dentro desse intervalo. 
 
