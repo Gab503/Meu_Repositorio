@@ -361,4 +361,54 @@ E podemos ir em um outro sentido na bifurcação. Com o else.
 
       }
 
-  
+  ## Loops
+
+      while
+      {
+
+      } 
+* While: Enquanto uma condição for verdadeira, irá ficar em um loop, ou melhor, em ciclo. Repetindo o código nele várias vezes.
+
+      while
+      {
+           printf("Hello World\n");
+      }
+
+  Semelhante a uma estrutura condicional, while está constantemente se perguntando se deve ou não continuar. Semelhante a uma condição com sua própria expressão booleana. Assim, em C, precisa colocar parênteses após a palavra-chave while, e você tem de perguntar algo dentro desses parênteses.
+
+  ##### Mas e se quiser fazer algo eternamente, você só quer que a resposta seja eternamente True, ou melhor, yes. Isso é chamado de loop infinito.
+
+
+      while (true)
+      {
+           printf("Hello World\n"); 
+      }
+
+
+ .
+
+E se quisermos fazer algo finitamente, isto é, que não seja feito para sempre. Usá-se um loop "for" ou um loop while até que a condição seja false. 
+
+      int counter = 0; 
+      while ( counter < 50 )
+      {
+           printf("Hello World\n");
+           counter ++;
+      }
+      
+Dessa forma como está, irá contar do 0 até 49. Para corrigir isso:
+
+      int counter = 1;
+      while (counter <= 50 )
+      {
+           printf("Hello World\n");
+           counter ++;
+           
+      }
+
+loop for não se trata de uma expressão booleana. Comece dizendo o ponto de partida. Depois, coloque a condição que será verificada repetidas vezes. E a última coisa no parênteses de um loop for, 
+
+      for ( int counter = 0; counter < 50; counter ++) 
+      {
+           printf("Hello World\n");
+      }
