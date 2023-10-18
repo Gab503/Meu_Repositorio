@@ -445,3 +445,64 @@ Este princípio de solução de problemas onde você pode simplificar de outra f
       }
 
 Por convenção, normalmente colocamos funções personalizadas na parte inferior do arquivo. Por que ? Somente para quando um programador, ou neste caso, um professor quiser entender seu código de cima a baixo. É apenas uma convenção humana para colocar o programa principal, a função main na parte superior de seu arquivo. 
+
+      # include <stdio.h>
+
+      int main(void)
+      {
+          for (int i =0; i < 3; i++)
+          {
+              meow();
+          }
+
+      void meow(void)
+      {
+          printf("Meow\n");
+      }
+
+      }
+
+
+
+O problema é que quando você fazer isso, você vai ter criado um problema para si mesmo. Lembre-se que o computar fará tudo literalmente como está escrito para ele fazer. E o problema no momento é que quando o compilador ler o código de cima a baixo, à esquerda ou direit, não antes da declaração da função meow, a função meow não existirá. E no entanto, no loop for, a função meow está sendo chamada. Portanto o compilador simplesmente não sabe o que é a função meow, porque não encontrou meow ainda. Para resolver isso: 
+
+    # include <stdio.h>
+
+    // Prototype
+    void meow(void);
+
+    int main(void)
+    {
+        for (int i =0; i < 3; i++)
+        {
+            meow();
+        }
+
+    {
+        printf("Meow\n");
+    }
+
+    }
+
+É uma espécie de forma inteligente de dizer ao compilador que existirá uma função chamada meow mas que ainda não há mas vai ter. E é uma alternativa bem comum, para resolver esse problema.
+
+    # include <stdio.h>
+
+    int main(void)
+    {
+        meow(5);
+    }
+        void meow(void)
+        {
+            printf("Meow\n");
+        }
+
+* void meow (void): O primeiro void refere-se ao valor de retorno ou saída desta função. Resumindo, minha função personalizada meow não tem valor de retorno. Não produz nada por si só, em vez disso apenas tem um efeito colateral de impressão visualmente na tela. Mas tem uma entrada (void). E se você quiser que uma função em C aceite inputs ou argumentos, você pode literalmente fazer algo como:
+
+      void meow(int n )
+
+O nome do tipo que você quer, e o nome da variável que você deseja. Então suponha que eu queira que meow pegue como input algum número, vamos chamar de n. 
+
+        
+* Do while: É quase o mesmo que um loop while, exceto wue faz cegamente uma coisa primeiro antes de verificar uma condição. 
+
