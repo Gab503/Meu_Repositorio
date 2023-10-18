@@ -406,9 +406,42 @@ Dessa forma como está, irá contar do 0 até 49. Para corrigir isso:
            
       }
 
-loop for não se trata de uma expressão booleana. Comece dizendo o ponto de partida. Depois, coloque a condição que será verificada repetidas vezes. E a última coisa no parênteses de um loop for, 
+loop for não se trata de uma expressão booleana. Comece dizendo o ponto de partida. Depois, coloque a condição que será verificada repetidas vezes. E a última coisa no parênteses de um loop for é uma autalização, ou uma incrementação ou decrementação pela qual você pode fazer counter = counter + 1
 
       for ( int counter = 0; counter < 50; counter ++) 
       {
            printf("Hello World\n");
       }
+
+#### Abstração
+Este princípio de solução de problemas onde você pode simplificar de outra forma detalhes mais complicados. E a abstração é uma simplificação além de detalhes mais complicados ou detalhes de implementação. 
+
+      # include <cs50.h>
+      # include <stdio.h>
+
+      int main(void)
+      {
+          for (int i =0; i < 3; i++)
+          {
+              printf("Meow\n");
+          }
+      }
+
+* Para criar suas próprias funções:
+
+      # include <stdio.h>
+
+      void meow(void)
+      {
+          printf("Meow\n");
+      }
+
+      int main(void)
+      {
+          for (int i =0; i < 3; i++)
+          {
+              meow();
+          }
+      }
+
+Por convenção, normalmente colocamos funções personalizadas na parte inferior do arquivo. Por que ? Somente para quando um programador, ou neste caso, um professor quiser entender seu código de cima a baixo. É apenas uma convenção humana para colocar o programa principal, a função main na parte superior de seu arquivo. 
