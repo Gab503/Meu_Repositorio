@@ -233,7 +233,15 @@ Printf, tem a capacidade de imprimir não apenas strings, mas também diferentes
   
 * ...
 
+Também há peradores aritméticos:
 
+* Adição + 
+* Subtração -
+* Multiplicação *
+* divisão /
+* Módulo ou resto da divisão %
+
+  
 
 
 
