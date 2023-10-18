@@ -309,5 +309,11 @@ Para receber um número mais alto, precisará utilizar um outro tipo de dados se
  
   * counter ++;
  
-  * 
+  ## Estruturas Condicionais
+  Uma condição é como uma bifurcação na estrada que poderia permitir que você fizesse isso, esta outra coisa ou algo mais. Por exemplo:
+
+        if (x < y)
+        {
+             printf("x is less than y"); 
+        }
   
