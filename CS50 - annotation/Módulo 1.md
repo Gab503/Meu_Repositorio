@@ -317,3 +317,48 @@ Para receber um número mais alto, precisará utilizar um outro tipo de dados se
              printf("x is less than y"); 
         }
   
+Você não precisa destas duas chaves se você só tem uma linha de código dentro da condição. No entanto, estilisticamente, é recomendado. 
+
+E podemos ir em um outro sentido na bifurcação. Com o else.
+
+    if (x < y)
+    {
+        printf("x is less than y"); 
+    }
+    
+    else if (x > y)
+    {
+         printf("x is greater than y");
+    }
+
+    else  (x == y)
+    {
+         printf("x is equal to y");
+    }
+
+* Vale ressaltar que C diferencia letra maiúsculas e minúsculas. para isso continue na estrutura condiciona, e coloque ou, isto é || para fazer duas perguntas ao mesmo tempo. 
+
+      # include <cs50.h>
+      # include <stdio.h>
+
+      int main(void)
+      {
+  
+      // chars são caracteres individuais.
+      char c = get_char("Do you agree ? ");
+  
+      // Use aspas simples quando você está comparando caracteres individuais.
+      if (c == 'y' || c == 'Y')
+      {
+           printf("Agreed.\n");
+      }
+
+      else if ( c == 'n' || c == 'N')
+      {
+           printf("Not agreed.\n");
+      }
+
+
+      }
+
+  
