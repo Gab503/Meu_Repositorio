@@ -281,4 +281,33 @@ Para receber um número mais alto, precisará utilizar um outro tipo de dados se
              }
 
 
+* Casting:Cast ou Typecast. Covencer o computador a converter um tipo de dado em outro. Entre parênteses, apenas colocando o novo tipo de dados que você deseja.
 
+        # include <cs50.h>
+        # include <stdio.h>
+
+        int main (void)
+        {
+            // Get  numbers from user
+            int x = get_int("what is X ? ");
+            int y = get_int("What is Y ? ");
+
+            // Divide x by y, and Convert X and Y to Float. Remember, x and y are integer variables
+            float z = (float) x / (float) y;
+            printf("%f\n", z);
+
+        }
+
+  ####  Syntatic sugar:
+  * counter = 0
+    
+  * int counter = 0;
+    
+  * counter = counter +1;
+    
+  * counter += 1;
+ 
+  * counter ++;
+ 
+  * 
+  
