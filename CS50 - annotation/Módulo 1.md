@@ -241,6 +241,24 @@ Também há peradores aritméticos:
 * divisão /
 * Módulo ou resto da divisão %
 
+* File name: addition.c
+  
+            # include <cs50.h>
+            # include <stdio.h>
+
+            int main(void)
+            {
+                int x = get_int("What is X ? ");
+
+                int y = get_int("What is Y ? ");
+
+                printf("%i \n", x + y );
+
+             }
+
+  * Deta vez, digite make addition
+  * ./addition
+
   
 
 
