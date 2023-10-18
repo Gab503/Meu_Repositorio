@@ -11,4 +11,4 @@ int main(void)
 
 }
 
-
+Não poderá receber mais do que 4 bilhões, 2 bilhões para os números positivos, e 2 bilhões para os negativos. 
