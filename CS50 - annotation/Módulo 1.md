@@ -265,7 +265,20 @@ Sem precisar cria estruturas condicionais para verificar se recebeu um número i
 
 * Ints usam apenas 32 bits no total. Com 32 bits, poder contar até aproximadamente até 4 bilhões. Mas get_int suporta inteiros de forma ampla, o que inclui não apenas números positivos, mas também números negativos e zero. Se você quiser suportar ambos os números positivos e números negativos, você pode representar 4 bilhões ou mais de valores totais possíveis. Mas se quiser ir mais longe, você pode contar tão alto quanto 2 bilhões na direção positiva e 2 bilhões na direção negativa.
 
-* 
+Para receber um número mais alto, precisará utilizar um outro tipo de dados sem ser int. Neste caso, long, um número inteiro longo.
+
+             # include <cs50.h>
+             # include <stdio.h>
+
+             int main(void)
+             {
+                 long x = get_long("What is X ? ");
+
+                 long y = get_long("What is Y ? ");
+
+                 printf("%li \n", x + y );
+
+             }
 
 
 
