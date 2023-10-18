@@ -1,0 +1,14 @@
+# include <cs50.h>
+# include <stdio.h>
+
+int main (void)
+{
+    // Get  numbers from user
+    int x = get_int("what is X ? ");
+    int y = get_int("What is Y ? ");
+
+    // Divide x by y, and Convert X and Y to Float. Remember, x and y are integer variables
+    float z = (float) x / (float) y;
+    printf("%f\n", z);
+
+}
