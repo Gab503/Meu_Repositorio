@@ -1,0 +1,14 @@
+# include <cs50.h>
+# include <stdio.h>
+
+int main(void)
+{
+    long x = get_long("What is X ? ");
+
+    long y = get_long("What is Y ? ");
+
+    printf("%li \n", x + y );
+
+}
+
+// Vai permitir receber números acima de 2 bilhões, usando long.
