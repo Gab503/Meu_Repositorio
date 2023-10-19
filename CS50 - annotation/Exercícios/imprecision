@@ -1,0 +1,12 @@
+# include <stdio.h>
+# include <cs50.h>
+
+int main(void)
+{
+    float x = get_float("What is x ? ");
+    float y = get_float("What is y ? ");
+
+    // 1/10 = 0.10 but:
+    printf("%.100f\n", x / y );
+    // Dará 100 casas decimais. 
+}
