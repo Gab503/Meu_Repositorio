@@ -540,5 +540,8 @@ O nome do tipo que você quer, e o nome da variável que você deseja. Então su
 
    Para contornar este problema, basta declarar a variável antes, não precisa necessáriamente atribuir um valor a variável, como neste caso **int n;**
 
+  #####  Quai as limitações do que o computador pode fazer ?
+  Se você têm uma quantidade finita de memória, assim você só pode fazer x coisas com ela. 
 
+  
    
