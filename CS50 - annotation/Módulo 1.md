@@ -543,5 +543,29 @@ O nome do tipo que você quer, e o nome da variável que você deseja. Então su
   #####  Quai as limitações do que o computador pode fazer ?
   Se você têm uma quantidade finita de memória, assim você só pode fazer x coisas com ela. 
 
-  
+    # include <stdio.h>
+    # include <cs50.h>
+
+    int main(void)
+    {
+        float x = get_float("What is x ? ");
+        float y = get_float("What is y ? ");
+
+        // 1/10 = 0.10 But: 
+        printf("%.100f\n", x / y );
+        // There's a lot of decimal numbers
+    }
+
+  Os computadores são finitos em sua capacidade, eles têm apenas um tanto de RAM, hardware, bits, que se você usar apenas um número finito de bits, 32, por exemplo, ou 64, você pode contar facilmente bem alto ou com bastante precisão. Você não pode contar infinitamente nem alto e nem com precisão. Em algum momento você tem que começar a aproximar os valores. Se ele tiver apenas um número finito de bits, 32, atráves do qual representa um float. Há um número infinito de floats apontando para os números reais. MAs infelizmente, se você tiver um número finito de bits, você tem que começar a arredondar um pouco.
+
+Para a maioria isso não é um problema. Mas pode muito bem ser se você estiver fazendo contas, lidando com finanças ou valores monétarios ou operações militares onde há muitos números pequenos, cientificamente, e pode fazer a diferença. E há de fato muitos exemplos no mundo real onde coisas ruins acontecem por causas desta chamada imprecição. 
+
+E há outra coisa que os computadores se deparam. Não apenas este ponto flutuante de imprecisão, mmas mesmos inteiros têm suas limitações. Lembre-se que os inteiros, é claro, podem ser representados em decimal ou em binário. Se tiverem apenas 32 bits ou um long em C. Se for apenas 64 bits, esses são grandes números, mas eles não são infinitamente grandes. 
+
+#### O Bug milênio 1 January 2000:
+Muita coisa deu problema no mundo, todos estavam preocupados com catástrofes em 01/01/200, porque os seres humanos tinham decidido, sem enxergar a longo prazo, armazenar anos usando apenas dois dígitos. Assim, 1995 seria representado como 95. Em seguida, em torno da mudança do ano de 1999 a 2000, qualquer programa ou sistema de computador que ainda estava usando dois digítos acrescentaria, é claro 1, ao bater da meia-noite. Infelizmente, se não houver um terceiro digíto disponível, ele desaparece. E o mundo inteiro confunde o ano 2000 para o ano 1900, porque 1900 foi assumido como sendo o prefixo. 
+
+E pode acreditar, os humanos estão prestes a fazer isso novamente, no ano de 2038. Vamos ficar sem bits para acompanhar o tempo. Porque anos atrás, os humanos decidiram, razoavelmente à época, usar 32 bits para representar números. Usar 32 bits para contar o número de segundos a partir do ano, uma data, 1 de Janeiro de 1970. Foi aí que o tempo teve início no âmbito da computação, e temos contado os segundos desde então. Infelizmente, com 32 bits, você só pode contar até 4 bilhões. E infelizmente, vamos atingi o quarto bilionésimo segundo em 19 de janeiro de 2038. Portanto, a menos que todos nós atualizemos nossos dispositivos, e pior ainda, sistemas e satélites incorporados e qualquer hardware dos dispositivos que usamos agora, estamos prestes a nos depararmos com esse problema, novamente onde, de repente, será como em 1 de Janeiro de 1970 novamente. 
+
+A menos que nos coloquemos à frente deste problema. 
    
