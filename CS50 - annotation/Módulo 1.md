@@ -138,7 +138,7 @@ A IDE CS50 é, na verdade como se fosse seu próprio servidor ou seu próprio co
 
 * ls : É uma notação abreviada para listas. E simplesmente, ls lista os arquivos ou pastas em sua pasta atual. Você ter observado que Hello* está destacado e com um asterisco. E isso é apenas uma pista visual de que esse arquivo é executável. Ou seka, que esse é um programa que você pode rodar com ./Hello.
 
-* É possível renomear o arquivo dentro da janela do terminal.  Se quiser o remover digite:
+* É possível remover o arquivo dentro da janela do terminal.  Se quiser o remover digite:
 
         $rm Hello
         rm: remove regular file 'Hello' ? yes
@@ -539,5 +539,6 @@ O nome do tipo que você quer, e o nome da variável que você deseja. Então su
 
 
    Para contornar este problema, basta declarar a variável antes, não precisa necessáriamente atribuir um valor a variável, como neste caso **int n;**
+
 
    
