@@ -506,3 +506,38 @@ O nome do tipo que você quer, e o nome da variável que você deseja. Então su
         
 * Do while: É quase o mesmo que um loop while, exceto wue faz cegamente uma coisa primeiro antes de verificar uma condição. 
 
+*  Sempre que for declarar variáveis, ela tecnicamente precisam estar entre chaves. As chaves pertencentes à função main ou de outras funções. Mas, o problema é quando você declara um variável dentro de chaves, você se depara com uma questão de escopo.
+
+*  Escopo: O escopo de uma variável é as linhas de códigos em que ela existe. O escopo de uma variável são as linhas de código onde você pode usar essa variável.
+
+       // Abstraction and scope
+
+       # include <cs50.h>
+       # include <stdio.h>
+
+       int get_positive_int(void);
+
+       int main(void)
+       {
+           int i = get_positive_int();
+           printf("%i\n", i);
+       }
+
+       // Prompt user for positive integer
+       int get_positive_int(void)
+       {
+           int n;
+           do
+       {
+        
+            n = get_int("Positive Integer: ");
+       }
+
+       while (n < 1 );
+       return n;
+       }
+
+
+   Para contornar este problema, basta declarar a variável antes, não precisa necessáriamente atribuir um valor a variável, como neste caso **int n;**
+
+   
