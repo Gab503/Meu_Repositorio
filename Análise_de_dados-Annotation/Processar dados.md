@@ -207,3 +207,10 @@ Margem de erro é a quantidade máxima que se espera que os resultados da amostr
 Dados sujos são dados incompletos, incorretos ou irrelevante para o problema que você está tentando resolver.
 
 * Dados limpos são dados que estão completos, corretos e são relevantes para o problema que você está tentando resolver. Quando você trabalha com dados limpos você vai perceber que seus projetos acontecem muito mais tranquilamente. 
+
+* Dados sujos, são incompletos, incorretos, ou irrelevantes para o problema que você está tentando resolver.
+
+* Engenheiros de dados transformam dados em um formato útil para ánalise e dão uma infra-estrutura confiável. Isto significa que eles desenvolvem, mantêm e testam os bancos de dados e sistemas relacionados. Especialistas em armazenamento de dados desenvolvem processos e procedimentos para efetivamente armazenar e organizar os dados. Eles garatem que os dados estejam disponíveis, seguros e redundantes para evitar perdas.
+
+* É importante ter em mente: Nenhum conjunto de dados é perfeito ! É sempre uma boa ideia examinar e limpar os dados antes de iniciar a análise.
+
