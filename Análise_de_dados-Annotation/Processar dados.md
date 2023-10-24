@@ -235,5 +235,45 @@ Lembre-se que um campo é um único pedaço de informação de uma linha ou colu
 
 #### A validação de dados é uma ferramenta para verificação da exatidão e qualidade dos dados antes de adiciona-los ou importa-los.
 
+#### Princípios de integridade dos dados
+
+* Validade: O conceito de usar princípios de integridade dos dados para garantir que as medidas estejam  em conformidade com as regras ou restrições de negócios definidas.
+
+* Integridade: O grau em que todas as medidas necessárias são conhecidas.
+
+* Consistência: O grau em que um conjunto de medidas é equivalente em todos os sistemas.
+
+* Precisão: O grau de conformidade de uma medida com um padrão ou um valor verdadeiro.
 
 
+### Ferramentas e técnicas para limpar dados - Uma visão geral básica
+
+Antes de remover dados indesejados, é sempre uma boa prática fazer uma cópia do conjunto de dados.
+Dessa forma, se você remover algo que acaba precisando no futuro, você pode acessá-los facilmente e colocá-lo de volta no conjunto de dados.
+
+* Tipicamente, as duplicatas aparecem quando você está combinando conjuntos de dados de mais de uma fonte ou usando dados de múltiplos setores dentro da mesma empresa. As duplicatas podem ser um grande problema para analistas de dados.
+
+Portanto, é realmente importante que você rpossa encontrá-los, removê-los antes do inpicio de qualquer análise. 
+A maioria das planilhas oferecem ferramentas para ajudar a encontrar e remover duplitas. 
+
+* Dados irrelevante, que são dados que não se ecaixam no problema específico que você está tentando resolver, também precisam ser removidos.
+
+A remoção de dados irrelevantes requer um pouco mais de tempo e esforço porque você precisa descobrir a diferença entre os dados que você precisa e os dados que você não precisa. 
+
+* Remover os espaços em brancos.
+
+Espaços extras podem causar inesperados resultados quando você organiza, filtra, ou pesquisa atráves de seus dados. E porque esses caracteres são fáceis de errar, eles podem levar a resultados inesperados e confusos. 
+
+Para remover esses espaços em indesejados ou células em branco, você mesmo pode apagá-los. Ou novamente, você pode confiar em suas planilhas, que oferecem muitas funções para remover espaços automaticamente. 
+
+* Correção de erros ortográficos.
+
+Uso inconsistente de maiúsculas e minúsculas, pontuação incorreta, e outros erros de digitação. Estes tipos de erros podem levar a alguns grandes problemas.
+
+Como os outros problemas, você também pode resolver esses problemas manualmente. Ou você pode usar ferramentas de planilhas, como a verificação ortográfica, autocorreção e formatação condicional para facilitar a sua vida.
+
+* Remover a formatação diferente.
+
+Isto é importante quando você obtém dados de muitas fontes diferentes. Cada banco de dados tem sua própria formatação, o que pode fazer com que os dados pareçam incosistentes. Criar um visual limpo e uma aparência consistente para sias planilhas facilitará uma ferramenta valiosa para que você e sua equipe tomem decições importantes. 
+
+A maioria das planilhas, também têm uma ferramenta de "formatos claros"
