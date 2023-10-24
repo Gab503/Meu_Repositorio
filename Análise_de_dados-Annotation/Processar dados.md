@@ -277,3 +277,22 @@ Como os outros problemas, você também pode resolver esses problemas manualment
 Isto é importante quando você obtém dados de muitas fontes diferentes. Cada banco de dados tem sua própria formatação, o que pode fazer com que os dados pareçam incosistentes. Criar um visual limpo e uma aparência consistente para sias planilhas facilitará uma ferramenta valiosa para que você e sua equipe tomem decições importantes. 
 
 A maioria das planilhas, também têm uma ferramenta de "formatos claros"
+
+#### Limpar dados de diferentes fontes
+
+* Fusão: Um acordo que une duas oganizações em uma. A função de dados é o processo de combinação de dois ou mais conjuntos de dados em um único conjunto de dados.
+
+* Em anáçise de dados, a compatibilidade descreve quão bem dois ou mais conjuntos de dados são capazes de trabalhar em conjunto.
+
+* Perguntas que devem ser feitas:
+  - Tenho todos os dados que preciso ?
+  - Existem os dados que eu preciso dentro destes conjuntos de dados ?
+  - Os conjuntos de dados precisam ser limpos, ou eles estão pronto para uso ?
+  - OS conuntos de dados limpos são do mesmo padrão ?
+  - Quais campos são repetidos regularmente ?
+  - Como são tratados os valores ausentes ?
+  - Há quanto tempo os dados foram atualizados ?
+
+Encontrar as respostas para estas perguntas e compreender se eu preciso consertar algum problema no início de um projeto é um passo muito importante na fusão de dados.
+
+Os analistas de dados poderiam usar as ferramentas de planilha ou colsutas SQL para a limpeza, fusão, e preparação para a análise dos conjuntos de dados. Dependendo da ferramenta que você decide usar, o processo de limpeza pode ser simples ou muiot complexo.
