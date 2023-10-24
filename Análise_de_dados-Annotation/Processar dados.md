@@ -214,3 +214,26 @@ Dados sujos são dados incompletos, incorretos ou irrelevante para o problema qu
 
 * É importante ter em mente: Nenhum conjunto de dados é perfeito ! É sempre uma boa ideia examinar e limpar os dados antes de iniciar a análise.
 
+### Como reconhecer e limpar dados sujos
+* Ortografia incorreta, variações ortográficas, letras misturadas, pontuação inconsistente e erros de digitação em geral, acontecem quando alguém digita um pedaço de dado incorretamente.
+
+* Como analista de dados, você também lida com diferentes moedas. 
+
+* Formatação inconsistente, algo que devia ser formatado de um geito, mas está de outro. 
+
+* Duplicatas
+
+* Valores nulos (em branco)
+
+* Etiquetagem:
+
+Para entender a etiquetagem, imagine-se tentando conseguir um computador oara identificar corretamente os ursos panda entre imagens de todos os diferentes tipos de animais. Você precisa mostrar ao computador milhares de imagens de ursos panda, todos eles são rotulados como ursos panda. Qualquer imagem rotulada incorretamente, como um que é apenas um urso, causará um problema.
+
+* Comprimento de campo incosistente:
+
+Lembre-se que um campo é um único pedaço de informação de uma linha ou coluna de uma planilha. O comprimento do campo é uma ferramenta para determinar muitos como caracteres podem ser inseridos em um campo, atribuindo um certo comprimento a estes campos em sua planilha é uma ótima maneira de evitar erros. Por exemplo, se você tiver uma coluna para o ano de nascimento de alguém, você sabe que o comprimento do campo é quatro, porque todos os anos têm quatro dígitos.
+
+#### A validação de dados é uma ferramenta para verificação da exatidão e qualidade dos dados antes de adiciona-los ou importa-los.
+
+
+
