@@ -90,4 +90,14 @@ Se ao executar tes_calculator.py e não aparecer nada no terminal, isso é um bo
           main()
 
   
+* Pytest: Pytest é um programa de terceiros que você pode baixar e instalar e que automatizará o teste do seu código, desde que você escreva os testes. Esta biblioteca adota algumas convenções para que você não precise escrever tantas linhas de código manualmente. Eles fazem parte disso automaticamente para você. Existem outras bibliotecas para testes unitários, que testam unidades do seu código. Mas o pytest é um pouco mais simples.
+
+* O teste unitário é apenas uma forma formal de escrever o teste de unidades indivíduais do seu programa. Essas unidades indivíduais são as funções. 
+
+Portanto, os teste unitários são normalmente testes para funções que você escreveu. 
+
+Documentação do Pytest: https://docs.pytest.org/en/7.4.x/ 
+
+Para instalar, digite no terminal pip install pytest
+
 
