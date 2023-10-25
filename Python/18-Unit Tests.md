@@ -100,4 +100,6 @@ Documentação do Pytest: https://docs.pytest.org/en/7.4.x/
 
 Para instalar, digite no terminal pip install pytest
 
+No terminal digite: pytest test_calculator.py e irá mostrar os erros.
+
 
