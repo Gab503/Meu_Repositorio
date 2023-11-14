@@ -1,30 +1,32 @@
-#include <cs50.h>
-#include <stdio.h>
+# include <stdio.h>
+# include <cs50.h>
 
 int main(void)
 {
-    int height; //declare int variable Height
+    int altura;
     do
     {
-        height = get_int("Height: ");
+        altura = get_int("Altura: ");
     }
-    while (height < 1 || height > 8);  //make sure height is not less than 1 or greater than 8
+    while(altura < 1 || altura > 8);
 
-    for (int row = 0; row < height; row++) //to print new line as ROW
+    for (int linha = 0; linha < altura; linha ++)
     {
-        for (int space = height - row - 1; space > 0; space--) //to print SPACE
-        {
+         for (int espaço = altura - linha -1; espaço > 0; espaço --)
+         {
             printf(" ");
-        }
-        for (int hash = 0; hash < row + 1; hash++) //to print hashes(#)
-        {
+         }
+
+         for (int hash = 0; hash < linha + 1; hash ++)
+         {
             printf("#");
-        }
+         }
         printf("  ");
-        for (int right_hash = 0; right_hash < row + 1; right_hash++ )
+        for (int hash_direito = 0; hash_direito < linha + 1; hash_direito ++ )
         {
             printf("#");
         }
         printf("\n");
     }
+
 }
