@@ -156,6 +156,27 @@ Portanto há 3 arquivos sendo combinados em seu programa.
 todos em grande conjunto blob, se preferir, representando coletivamente o seu programa, hello.c
 
 
+## Debugging
+
+Os humanos cometem erros em todas as formas de vida. E isso é muito verdadeiro no contexto do código, onde, novamente, 
+de acordo com os módulos anteriores, a precisão é muito importante, assim como a correção. E às é difícil alcançar esses dois objetivos. 
+
+#### Como você pode depurar seu próprio código, ou seja, encontrar problemas em seu código ?
+Um bug é um erro em um programa. Nos módulos anteriores, há o help50, style50, check50, mas há mais ferramentas que podem
+ajudar você.
+
+É uma ferramenta de depuração universal, chamada no contexto de C printf. Então printf, é claro é apenas uma função que 
+imprime coisas na tela. Mas isso em si é uma ferramenta maravilhosamente poderosa por meio da qual você pode rastrear
+problemas em seu código.
+
+Quase todas as linguagens de programação que existem têm alguma forma de printf, print ou say do scrath por exemplo, mas será
+alguma capacidade de exibir informações ou apresentar informações a um humano.
+
+
+
+
+
+
 
 
 
