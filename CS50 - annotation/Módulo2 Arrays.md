@@ -1,0 +1,168 @@
+# Módulo 2 Arrays
+
+Nas últimas aulas, vimos que para um código em C ser executado, precisa primeiro ser convertido em linguagem de máquina (código binário).
+Para fazer isso usámos make hello por exemplo. 
+
+Make esta automatizando um conjunto mais específico de etapas. Por exemplo ao fazer make hello irá aparecer na sua tela (ou não, na minha não apareceu, acho que é por causa da versão atual)
+
+             
+    clang - ggdb3 -00 -std=c11 -wall -werror - wextra -wno-sign-compare -Wno-used-parameter -Wno-unused-variable -wshadow hello.c -lcrypt -lcs50 -lm -o hello
+
+#### O make está automatizando a execução de um comando, mais especificamente denominado clang. 
+Clang é o compilador, um compilador sendo um programa que converte código-fonte em código de máquina. Temos usado Clang o tempo todo. Mas o Clang requer um pouco mais de sofisticação. 
+
+Clang é outro programa instalado no CS50 IDE. É um compilador muito popular que você pode baixar em seu próprio dispositivo. Mas para executá-lo diretamente sem o make é um pouco diferente.          
+
+* Digite clang
+* Nome do arquivo que quer compilar.
+* E aperte enter
+
+      clang hello.c
+
+  Se não aparecer nada na tela, é porque tudo ocorreu bem. Ao digitar ls agora, você não verá o programa hello, e sim a.out*.
+
+      $ clang hello.c
+      $ ls
+      a.out* hello.c
+
+Este é um resquício histórico. Anos atrás, quando os humanos usavam um compilador para compilar seu código, 
+o nome do arquivo padrão que todo programa recebeu foi a.out para saída de assembly.
+Mas esse não é um bom nome para um programa. Não é de forma alguma descritivo do que faz. 
+Acontece que programas como o Clang podem ser configurados na linha de comando. 
+
+    $ clang -o hello hello.c
+
+Está fornecendo o que vamos chamar de argumento de linha de comando. Portanto esses comando, como make e rm, 
+às vezes podem apenas ser executados por si próprios. Mas muitas vezes, vimos que eles aceitam informações em algum sentido
+você digita make hello, rm hello. E a segunda palavra hello, nesses casos, é uma espécie de input para o comando, 
+agora conhecido como um argumento de linha de comando. É um input para o comando.
+
+
+Neste código temos mais de um argumento de linha de comando.
+
+* Temos a palavra Clang, que é o compilador que vamos executar.
+* -o uma notação abreviada para "output", "imprima o seguinte".
+* O que deseja como output ? hello, portanto a palavra final é hello.c
+
+Isso está dizend: Rode Clang, produza um arquivo chamado hello, e tome como arquivo de input o chamado hello.c.
+
+    M2/ $ clang -o hello hello.c
+    M2/ $ ls
+    hello*  hello.c
+
+Portanto, é assim que o Clang está ajudando a compilar o código. É uma espécie de automação de todos esses processos.
+
+    #include <stdio.h>
+    #include <cs50.h>
+
+    int main(void)
+    {
+        string name = get_string("What's your name ? ")
+        printf("Hello %s\n", name);
+    }
+Esta versão 2.0 do hello world envolvia solicita um input do usuário usando a função get_string do CS50, armazenado a saída em 
+uma variável chamada nome. Mas lembre-se de que também tivemos que adicionar cs50.h no início do arquivo.
+
+
+
+Ao usar uma biblioteca, não basta apenas incluí-la no cabeçalho no topo de seu próprio código. Às vezes, 
+você também precisa dizer ao computador onde encontrar os 0 e 1 que alguém escreveu para implementar 
+uma função como get_string.
+
+Portanto, o arquivo de cabeçalho, como cs50, apenas informa ao compilador que a função existe. Há um segundo mecanismo 
+que até agora foi automatizado para nós que diz ao computador onde encontrar 0 e 1 que implementam as funções no cabeçalho 
+desse arquivo.
+
+Portanto, será necessário adicionar outro argumento de linha de comando para este comando.
+
+    $ clang -o hello hello.c -lcs50 
+
+* lcs50: Simplesmente se refere ao link na biblioteca CS50.
+
+Portanto o make automatiza tudo isso para nós.
+
+Quando você compila seu código-fonte para o código de máquina, há mais etapas envolvidas. 
+E quando dizemos compilar, na verdade queremos dizer essas quatro etapas:
+
+**Preprocessing**
+
+**Compiling**
+
+**Assembling**
+
+**Linking**
+
+1. Pega seu próprio código-fonte, e ele pré-processa seu código, de cima a baixo, da esquerda para a direita.
+Pré-processar seu código significa que procura todas as linhas que começam com um símbolo hash, como: 
+
+       #include<cs50.h>
+       #include<stdio.h>
+
+E o que a etapa de pré-processamento faz é localizar e substituir. O hash include pela função da biblioteca que está sendo usado.
+
+    #include<cs50.h>  -> string get_string(string prompt);
+    #include<stdio.h> -> int printf(string format,...);
+
+Lembrando que isto ocorre automaticamente. Está definindo todas as funções no código para que o computador saiba o que fazer, 
+porque lembre-se de que encontramos este tipo de bug no módulo anterior, onde tentava implementar uma função chamada get_positive_int. 
+quando foi implementado essa função na parte inferior do código, o compilador era meio burro por não perceber que ele existia
+porque foi implementado até o final do arquivo. 
+
+Ao colocar uma menção a esta função, uma dica, se preferir, bem no topo, é como treinar o compilador a saber de antemão que 
+ainda não sei como está implementado, mas sei que get_String vai existir. Ainda não sei como está implementado
+mas eu sei que printf vai existir. 
+
+Portanto esses arquivos de cabeçalho que incluímos, contém todos os protótipos, ou seja, todas as dicas para todas as funções
+que existem na biblioteca para que seu código, quando compilado, saiba, de cima a baixo que essas funções existirão. 
+
+* Portanto o pré-processador apenas nos poupa o trabalho de ter que copiar e colar todos esses protótipos, ou se preferir assim,
+* todas essas dicas, nós mesmos.
+
+ 2. Agora a compilação tem um significado mais preciso. Compilar seu código agora significa pegar este código C
+e convertê-lo do código-fonte para outro tipo de código-fonte o que chamamos de código assembly.
+
+Resumindo, há muitos computadores diferentes no mundo, e especificamente, há muitos tipos diferentes de CPUs, Unidade Central 
+de Processamento, o cérebro de um computador. E uma CPU entende certos comandos. E esses comandos tendem a ser expressos
+nesta linguagem chamada código assembly. 
+
+Então você escreve o código em C e o computador, porém converte para uma linguagem mais amigável chamada código Assembly.
+
+E decádas atrás, os humanos escreveram essas coisas. Humanos escreveram código assembly. Mas hoje em dia, temos C, e linguagens como 
+Python mais fáceis de usar.
+
+O código em assembly está um pouco mais próximo do que o próprio computador entende. 
+
+3. Assembling (montar). Significa pegar o código assembly e finalmente convertê-lo em código de máquina ( código binário) 0s e 1s.
+
+Então você escreve o código-fonte. O compilador o monta em código assembly. Em seguida, ele o compila em código assembly. 
+Em seguida, ele o monta em código de máquina até que tenhamos os 0s e 1s.
+
+Mas na verdade há uma etapa final. 
+
+Só porque o código que você escreveu foi convertido em 0 e 1, ele ainda precisa ser vinculado aos 0s e 1s que o CS50 escreveu 
+e que os designers da linguagem C escreveram anos atrás. Então quando você escreve um código, não está apenas incluindo os protótipos 
+para funções como get_string e printf no topo, as demais linhas de código ( da função principal) são as finalmente
+convertidas em 0s e 1s. 
+
+Portanto há 3 arquivos sendo combinados em seu programa.
+
+* O primeiro hello.c uma vez que é pré-processado e compilado e montado, fica na forma de 0s e 1s.
+
+* Em algum lugar no CS50 IDE, há um monte de 0 e 1 representando CS50.c.
+
+* Em algum lugar na IDE CS50 há outro arquivo representando os 0s e 1s para stdio.h.
+
+4.  Esta quarta estapa final, conhecida como linking, que pega todos os 0s e 1s, todos do CS50, todos de printf, e os linka
+todos em grande conjunto blob, se preferir, representando coletivamente o seu programa, hello.c
+
+
+
+
+
+
+    
+
+
+
+
+
