@@ -243,28 +243,44 @@ Após apertar enter, verá um novo painel a esquerda.
 
 O bug deste programa, é que não existe get_negative_int, pois está sendo declarado após a função principal. 
 
-    #include<cs50.h>
-    #include<stdio.h>
+    1 #include<cs50.h>
+    2 #include<stdio.h>
+    3
+    4 // Prototype
+    5 int get_negative_int(void);
+    6
+    7 int main(void)
+    8 {
+    9
+    10  int i = get_negative_int();
+    11  printf("%i\n", i);
+    12 }
+    13
+    14 int get_negative_int(void)
+    15  {
+    16  int n;
+    17   do
+    18  {
+    19      n = get_int("Negative Integer: ");
+    20  }
+    21   while (n < 0);
+    22   return n;
+    23  }
 
-    // Prototype
-    int get_negative_int(void);
+Ao depurar este código:
 
-    int main(void)
-    {
-        int = i get_negative_int();
-        printf("%i\n", i);
-    }
+* Call stack é uma maneira sofisticada de se referir a todas as funções que seu programa neste momento executou e ainda não retornou.
+No momento a [unica função que há é main. Porque eu definir um ponto de interrupção na linha 10, que está por definição dentro do main.
 
-    int get_negative_int(void)
-    {
-        int n;
-        do
-        {
-            n = get_int("Negative Integer: ");
-        }
-        while (n < 0);
-        return n
-    }
+* Step into. Salta para a função get_negative_int, e se concentra na primeira linha de código, a linha 19. Agora em Call Stack apareceu a função get_negative_int
+
+
+* Verá que o bug está no loop while, para corrigílo basta fazer n > 0.
+
+## Depuração do Pato de borracha
+A depuração do pato de borracha (ou rubber ducking ) é um método de depuração de código articulando um problema em linguagem natural falada ou escrita . O nome é uma referência a uma história do livro The Pragmatic Programmer , na qual um programador carregava um pato de borracha e depurava seu código, forçando-se a explicá-lo, linha por linha, para o pato. Existem muitos outros termos para esta técnica, muitas vezes envolvendo diferentes objetos inanimados (geralmente) ou animais de estimação, como um cachorro ou um gato.
+
+
 
 
 
