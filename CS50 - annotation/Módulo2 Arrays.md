@@ -172,6 +172,70 @@ problemas em seu código.
 Quase todas as linguagens de programação que existem têm alguma forma de printf, print ou say do scrath por exemplo, mas será
 alguma capacidade de exibir informações ou apresentar informações a um humano.
 
+    #include <stdio.h>
+
+    int main(void)
+    {
+        for (int i = 0; i <= 10; i++)
+        {
+            printf("i is now %i\n", i);
+            printf("#\n");
+        }
+    }
+
+Há um bug nesse programa, cujo objetivo é imprimir 10 hash verticalmente. E através do primeiro printf podemos analisar melho este bug.
+Ao executar este programa, verá que começa no 0, e não no 1 para resolver isso:
+
+    for (int i = 1; i <= 10; i++);
+
+#### Mas e se o código tive muitas linhas, vai precisar colocar printf para cada variável ? Para cada operação que for feita etc ?
+Para isso temos o debug50 construido em cima de uma ferramenta padrão da indústria conhecida como GDB, o GNU DeBugger, que é uma ferramenta
+padrão que muitos sistemas de computador diferentes usam para fornecer a capacidade de depurar seu código de uma forma mais sofisticada do que usar apenas printf.
+
+    #include <stdio.h>
+
+    int main(void)
+    {
+        for (int i = 0; i <= 10; i++)
+        {
+            printf("#\n");
+        }
+    }
+
+Um depurador, é uma ferramenta que permite que você execute seu código passo a passo e olhe para dentro de variáveis e outras partes da memória dentro do computador 
+enquanto seu programa está em execução. No momento, quase todo programa que executamos leva uma fração de segundo para ser executado, isso é muito rápido para envolver 
+nossa mente em torno do que está acontecendo passo a passo. Um depurador permite que você execute seu programa muito mais devagar, passo a passo, para que você possa ver
+o que está acontecendo. 
+
+File name = bug.c
+
+    $ debug50 ./bug
+    Looks like you haven't set any breakpoints. Set at least one breakpoint by clicking to the left of a line number an  d then re-run debug50!
+
+Debug50 precisa que eu diga ao computador antes em que linha eu quero entrar e seguir passo a passo. Clique na numeração da linha que deseja (linha 6)
+
+Após apertar enter, verá um novo painel a esquerda. 
+
+* A linha 6 está destacada. E isso é porque o debug50 está fazendo, é executar o programa mas interrompe a execução na linha 6. Então faz tudo da linha 1 a 5.
+
+* Ao clicar em Step Over, irá começar a pecorrer a linha de código
+
+      #include<cs50.h>
+      #include<stdio.h>
+
+      int main(void)
+      {
+          int = i get_negative_int();
+          printf("%i\n", i);
+      }
+
+O bug deste programa, é que não existe get_negative_int.
+
+
+
+
+
+
 
 
 
