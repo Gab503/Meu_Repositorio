@@ -223,29 +223,49 @@ Após apertar enter, verá um novo painel a esquerda.
       #include<cs50.h>
       #include<stdio.h>
 
+
       int main(void)
       {
           int = i get_negative_int();
           printf("%i\n", i);
       }
 
-O bug deste programa, é que não existe get_negative_int.
+      int get_negative_int(void)
+      {
+          int n;
+          do
+          {
+              n = get_int("Negative Integer: ");
+          }
+          while (n < 0);
+          return n
+      }
 
+O bug deste programa, é que não existe get_negative_int, pois está sendo declarado após a função principal. 
 
+    #include<cs50.h>
+    #include<stdio.h>
 
+    // Prototype
+    int get_negative_int(void);
 
+    int main(void)
+    {
+        int = i get_negative_int();
+        printf("%i\n", i);
+    }
 
+    int get_negative_int(void)
+    {
+        int n;
+        do
+        {
+            n = get_int("Negative Integer: ");
+        }
+        while (n < 0);
+        return n
+    }
 
-
-
-
-
-
-
-
-
-
-    
 
 
 
