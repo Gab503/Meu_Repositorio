@@ -364,6 +364,31 @@ Vamos pensar na memória do computador como uma grade de bytes. E esse bytes tê
 
 * Cada caixa é 1 byte, e cada um desses bytes tem 8 bits, e um bit é apenas 0 ou 1. DE alguma forma, esta memória eletrônica está armazenando eletricidade da maneira certa para que seja armazenado um padrão de 0s e 1s, também conhecido como 72 decimal, 73 decimal, 33 decimal.  
 
+mas este programa não possui um bom designer. E se houver um score4 ? 5 6 e assim adiante.
+
+## Arrays
+Também presente em outras linguagens, parecido com às listas do Scratch. Um array em C, como em outras linguagens, é uma sequência de valores armazenados na memória consecutivamente, uma sequência de valores contínuos por assim dizer, de ponta a ponta. Nesse sentido, é como uma lista de valores da esquerda para a direita se usarmos a metáfora da imagem que desenhamos. 
+
+Se você quiser armazenar um monte de valores, mas eles estão todos inter-relacionados, como se fosse scores, você não precisa cria novamente novas variáveis. Por que não chamar todos esses scores de números, mas usar uma sintaxe diferente.
+E essa sintaxe dá acesso ao que são chamadas de arrays. Por exemplo:
+
+    int scores[3];
+
+Todas as scores (score1, score2, score3) estão em uma variável chamada scores.
+
+Em colchetes, dentro dos quais há um número que literalmenteconota quantos inteiros você deseja armazenar sob o nome "scores".
+
+Portanto esse array vai ser um pedaço da memória de ponta a ponta onde posso colocar valores. 
+
+    int scores[3];
+    scores[0] = 72;
+    scores[1] = 73;
+    scores[2] = 33;
+
+**Const / Constante**: Se eu souber antes que quero declarar um número que desejo para usar repetidas vezes sem copiar e colar
+posso criar um int constante. É uma característica de muitas linguagens em que você declara uma variável cujo valor nunca
+pode mudar . Depois de configurá-la, você não pode alterá-la. E isso é uma coisa boa porque, primeiro, não deveria mudar no contexto do programa. E segundo, apenas no caso do ser humano falhar, você não pode alterá-la acidentalmente quando não é sua intenção.
+
 
   
 
