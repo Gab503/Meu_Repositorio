@@ -325,7 +325,47 @@ da grade fisicamente desta parte da RAM.
 
 Se você estiver armazenando algo como um int, que ocupa 4 bytes, pode ocupar todos os quatro quadrados ao longo do topo, ou em um outro lugar, 
 
+Agora vamos abstrair o hardware físico. E só começar a pensar em nosso memória como apenas uuma grade. E tecnicamente não é uma estrutura bidimensional. 
 
+Vamos pensar na memória do computador como uma grade de bytes. E esse bytes têm 8 bits cada, esses bits são 0 e 1. 
+ 
+ Suponha que eu tenha escrito algum código que envolva a declaração de três pontuações.
+
+    #include <stdio.h>
+
+    int main(void)
+    {
+        int score1 = 72;
+        int score2 = 73;
+        int score3 = 33;
+
+        printf("Average: %f\n", (score1 + score2 + score3) / 3.0);
+    }
+
+* Onde elas seram armazenadas ?
+
+      ________________________
+      |score1 72  |  |  |  |  |
+       1001000  
+      _________________________
+      |score2 73  |  |  |  |  |
+       1001001
+      _________________________
+      |score3 33  |  |  |  |  |
+       100001
+      _________________________
+      |  |  |  |  |  |  |  |  |
+      _________________________
+      
+
+* Nas caixas da grade, score1 ocupa 4 caixas. Cada caixa representa 1 byte.E um inteiro no CS50 IDE é de 4 bytes.
+
+* O score2, da mesma forma vai ocupar 4 caixas e o score3 também.
+
+* Cada caixa é 1 byte, e cada um desses bytes tem 8 bits, e um bit é apenas 0 ou 1. DE alguma forma, esta memória eletrônica está armazenando eletricidade da maneira certa para que seja armazenado um padrão de 0s e 1s, também conhecido como 72 decimal, 73 decimal, 33 decimal.  
+
+
+  
 
 
 
