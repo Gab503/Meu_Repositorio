@@ -311,7 +311,19 @@ Mas é mais veloz que um HD ou até um SSD. É muito mais rápido porque é pura
 
 Com RAM, você tem a capacidade de abrir arquivos e executar programas mais rapidamente porque você clica duas vezes em um
 programa para executá-lo, ou você abre um arquivo para visualizá-lo ou editá-lo, ele é armazenado temporariamente na RAM. 
-se a bateria do seu laptop acabou, ou se seu computador foi desconectado ou se telefone estragou, enquanto estava escrevendo um e-mail a razão para qual você e eu tendemos a perder dados, porqe a RAM, a memória, é volátil. Ou seja requer eletricidade para continuar alimentá-la
+se a bateria do seu laptop acabou, ou se seu computador foi desconectado ou seu telefone estragou, enquanto estava escrevendo um e-mail por exemplo,  a razão para qual você e eu tendemos a perder dados, é porque a memória RAM, é volátil. Ou seja requer eletricidade para continuar alimentá-la
+
+Cada um retângulas da memória RAM é um tipo de chip. E nesses chips são armazenados todos os 0 e 1, os pequenos interruptores
+mencionado no módulo 0. 
+
+Eu não sei o tamanho de um pente de RAM, podemos pensar neste dispositivo físico, nesta memória, como sendo uma grade, de cima para baixo, da esquerda para a direita. E cada um dos quadrados desta grade, pode representar um byte individual. E talvez possa ter mais deles, talvez menos, mas não importa quantos existem, podemos pensar em cada um deles como tendo um local. 
+
+**Então o que significa que um char ocupe 1 byte ?**
+Isso significa que se a memória do seu computador está executando um programa, que talvez você escreveu usando uma variável char
+em algum lugar dele, o char que você está armazenando nessa variável pode muito bem ser armazenado do quadrado do canto superior
+da grade fisicamente desta parte da RAM. 
+
+Se você estiver armazenando algo como um int, que ocupa 4 bytes, pode ocupar todos os quatro quadrados ao longo do topo, ou em um outro lugar, 
 
 
 
