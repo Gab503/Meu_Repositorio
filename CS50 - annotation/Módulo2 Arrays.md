@@ -281,6 +281,37 @@ No momento a [unica função que há é main. Porque eu definir um ponto de inte
 A depuração do pato de borracha (ou rubber ducking ) é um método de depuração de código articulando um problema em linguagem natural falada ou escrita . O nome é uma referência a uma história do livro The Pragmatic Programmer , na qual um programador carregava um pato de borracha e depurava seu código, forçando-se a explicá-lo, linha por linha, para o pato. Existem muitos outros termos para esta técnica, muitas vezes envolvendo diferentes objetos inanimados (geralmente) ou animais de estimação, como um cachorro ou um gato.
 
 
+* Types: Cada um dos tipos de dados ( int, float etc) é definido em um sistema de computador típico como ocupando uma quantidade
+fixa de espaço. E isso depende do seu dispositivo, apenas quanto espaço é usado normalmente por esses tipos de dados.
+Mas no CS50 IDE o tamanho deles são:
+
+* bool 1 byte
+
+* char 1 byte
+
+* double 8 bytes
+
+* float 4 bytes
+
+* int 4 bytes
+
+* long 8 bytes
+
+* string ? bytes
+
+* ...
+
+É na memória RAM que os programas são armazenados enquanto estão em execução. E é onde os arquivos
+são armazenados quando abertos. 
+
+Então, normalmente, se você salvar, instalar programas ou salvar aquivos, são salvos no que geralmente é chamado de disco rígido, HD, ou SSD, CD ou algum outro meio físico. 
+
+E eles não precisam de eletricidade para armazenar seus dados a longo prazo. Mas com RAM é diferentes, é mais volátil. 
+Mas é mais veloz que um HD ou até um SSD. É muito mais rápido porque é puramente eletrônica, e não existem peças móveis. 
+
+Com RAM, você tem a capacidade de abrir arquivos e executar programas mais rapidamente porque você clica duas vezes em um
+programa para executá-lo, ou você abre um arquivo para visualizá-lo ou editá-lo, ele é armazenado temporariamente na RAM. 
+se a bateria do seu laptop acabou, ou se seu computador foi desconectado ou se telefone estragou, enquanto estava escrevendo um e-mail a razão para qual você e eu tendemos a perder dados, porqe a RAM, a memória, é volátil. Ou seja requer eletricidade para continuar alimentá-la
 
 
 
