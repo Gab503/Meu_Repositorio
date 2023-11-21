@@ -393,7 +393,41 @@ Ao declarar uma variável constante, escreva ela em letras maiúsculas, para dei
 
 * Para passar um array como input para uma função personalizada, precisa usar colchete [], mas não específicar o tamanho. Sua função pode então suportar um array que tem um espaço nela, é mais dinâmico dessa forma.
 
+ 
+      #include <cs50.h>
+      #include <stdio.h>
 
+      const int TOTAL = 3;
+
+      int main(void)
+      {
+
+          int scores[total];
+          for (int cont = 0; cont < TOTAL; cont ++)
+          {
+               scores[cont] = get_int("Score: ");
+          }
+
+         printf("Average: %f\n", average(TOTAL, scores);
+      }
+
+      float average(int lenght , int array[])
+      {
+          int sum = 0;
+          for (int i = 0; i < lenght; i++)
+          {
+              sum += array[i];
+          }
+          return sum / lenght;
+      }
+
+  Entratanto há um bug neste código, a função average está sendo declarada tendo como retorno um float, mas está sendo usado int.
+Basta fazer:
+
+      return sum / (float) lenght
+
+
+* 
     
 
   
