@@ -389,6 +389,12 @@ Portanto esse array vai ser um pedaço da memória de ponta a ponta onde posso c
 posso criar um int constante. É uma característica de muitas linguagens em que você declara uma variável cujo valor nunca
 pode mudar . Depois de configurá-la, você não pode alterá-la. E isso é uma coisa boa porque, primeiro, não deveria mudar no contexto do programa. E segundo, apenas no caso do ser humano falhar, você não pode alterá-la acidentalmente quando não é sua intenção.
 
+Ao declarar uma variável constante, escreva ela em letras maiúsculas, para deixar claro visualmente que há algo especial nesta variável
+
+* Para passar um array como input para uma função personalizada, precisa usar colchete [], mas não específicar o tamanho. Sua função pode então suportar um array que tem um espaço nela, é mais dinâmico dessa forma.
+
+
+    
 
   
 
