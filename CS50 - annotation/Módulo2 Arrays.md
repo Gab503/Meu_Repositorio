@@ -483,4 +483,5 @@ Se descrevermos isso na memória do computador, HI! são três letras, é como d
 Se temos a capacidade de representar sequências de coisas, inteiros, por exemplo score, faz sentido que podemos pegar outro primitivo, um tipo de dados muit básico com um char. E se quisermos soletrar coisas como esses char, como palavras em inglês, vamos apenas pensar em uma string como um array de caracteres, uma série de caracteres. 
 
 Isso é exatamente o que uma string é. Estão "HI!" tecnicamente falando, é um array chamado s. Uma string é apenas um array. 
-E se for um array, isso significa que podemos acessar, se quisermos os caracteres individuais dessa array
+E se for um array, isso significa que podemos acessar, se quisermos os caracteres individuais dessa array 
+ 
