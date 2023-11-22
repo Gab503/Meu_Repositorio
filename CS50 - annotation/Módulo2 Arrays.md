@@ -367,7 +367,7 @@ Vamos pensar na memória do computador como uma grade de bytes. E esse bytes tê
 mas este programa não possui um bom designer. E se houver um score4 ? 5 6 e assim adiante.
 
 ## Arrays
-Também presente em outras linguagens, parecido com às listas do Scratch. Um array em C, como em outras linguagens, é uma sequência de valores armazenados na memória consecutivamente, uma sequência de valores contínuos por assim dizer, de ponta a ponta. Nesse sentido, é como uma lista de valores da esquerda para a direita se usarmos a metáfora da imagem que desenhamos. 
+Também presente em outras linguagens, parecido com às listas do Scratch. Um array em C, como em outras linguagens, é uma sequência de valores armazenados na memória consecutivamente, uma sequência de valores contínuos por assim dizer, de ponta a ponta. Nesse sentido, é como uma lista de valores da esquerda para a direita se usarmos a metáfora da imagem que desenhamos. Como se fosse uma planilha.  
 
 Se você quiser armazenar um monte de valores, mas eles estão todos inter-relacionados, como se fosse scores, você não precisa cria novamente novas variáveis. Por que não chamar todos esses scores de números, mas usar uma sintaxe diferente.
 E essa sintaxe dá acesso ao que são chamadas de arrays. Por exemplo:
@@ -427,11 +427,60 @@ Basta fazer:
       return sum / (float) lenght
 
 
-* 
-    
+Até agora usamos apenas números, então usaremos agora strings. 
+
+    #include <stdio.h>
+
+    int main(void)
+    {
+        char c = '#';
+        printf("%i\n", c);
+    }
+
+Como pode observar, está em char mas sendo imprimido como int. Isto vai converter o char em seu código ASCII, isto é, # em 35.
+
+
+    #include <stdio.h>
+
+    int main(void)
+    {
+        char c1 = 'H';
+        char c2 = 'I';
+        char c3 = '!';
+
+        printf("%c%c%c\n", c1, c2, c3);
+
+        // Saída HI!
+    }
+
+* Cada linguagem de programação tem "strings", mesmo que tecnicamente não tenham um tipo de dado chamado string. C não tem tecnicamente um tipo de dado chamado string. Foi adicionado por meio da biblioteca do CS50.
+
+
+      #include <stdio.h>
+      #include <cs50.h>
+
+      int main(void)
+      {
+          string s = "HI!";
+
+          printf("%s\n", s);
+          // Saída HI!
+      }
 
   
+Se descrevermos isso na memória do computador, HI! são três letras, é como dizer, me dê três caixas, e deixe-me chamar essa string de s. 
+
+    _________________________
+    |H  I  !  |  |  |  |  |  |
+       s
+    _________________________
+    |  |  |  |  |  |  |  |  |
 
 
 
+* O que é uma string ?
 
+Se temos a capacidade de representar sequências de coisas, inteiros, por exemplo score, faz sentido que podemos pegar outro primitivo, um tipo de dados muit básico com um char. E se quisermos soletrar coisas como esses char, como palavras em inglês, vamos apenas pensar em uma string como um array de caracteres, uma série de caracteres. 
+
+Isso é exatamente o que uma string é. Estão "HI!" tecnicamente falando, é um array chamado s. Uma string é apenas um array. 
+E se for um array, isso significa que podemos acessar, se quisermos os caracteres individuais dessa array
