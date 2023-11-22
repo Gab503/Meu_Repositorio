@@ -471,7 +471,7 @@ Como pode observar, está em char mas sendo imprimido como int. Isto vai convert
 Se descrevermos isso na memória do computador, HI! são três letras, é como dizer, me dê três caixas, e deixe-me chamar essa string de s. 
 
     _________________________
-    |H  I  !  |  |  |  |  |  |
+    |H |I |!  |  |  |  |  |  |
        s
     _________________________
     |  |  |  |  |  |  |  |  |
@@ -483,5 +483,33 @@ Se descrevermos isso na memória do computador, HI! são três letras, é como d
 Se temos a capacidade de representar sequências de coisas, inteiros, por exemplo score, faz sentido que podemos pegar outro primitivo, um tipo de dados muit básico com um char. E se quisermos soletrar coisas como esses char, como palavras em inglês, vamos apenas pensar em uma string como um array de caracteres, uma série de caracteres. 
 
 Isso é exatamente o que uma string é. Estão "HI!" tecnicamente falando, é um array chamado s. Uma string é apenas um array. 
-E se for um array, isso significa que podemos acessar, se quisermos os caracteres individuais dessa array 
+E se for um array, isso significa que podemos acessar, se quisermos os caracteres individuais dessa array por meio de colchetes usado anteriormente.
+
+Ao utilizar printf("%s\n", s); 
+
+A função printf sabe exatamente o tamanho da string, ou melhor, do array, imprimindo apenas aquela única palavra (HI!). Então como um computador sabe onde uma string termina na memória se uma string é apenas uma sequência de caracteres ?
+
+    ________________________________________
+    |  H | I  |  ! | \0|     |    |    |    |
+     s[0] s[1] s[2] s[3]
+     _________________________________________
+    |    |    |    |    |    |    |    |    |
+    ___________________________________________
  
+Tecnicamente, uma string usa 4 bytes. Ela usa um quarto ( 1/4) de byte para ser inicializada para o que descreveriamos como barra invertida 0. Que representa apenas um caractere especial, também conhecido como o caractere null, que é apenas um valor especial que representa o final de uma string.Isso quer dizer que quando você cria uma string, entre aspas duplas, "HI!" a string tem comprimento 3. Mas você está desperdiçando ou gastando 4 bytes no total. 
+
+Porque \0 é uma pista para o computador de onde "HI!" termina e onde a próxima string talvez comece. Covertendo para decimal:
+
+     72    73    33    0
+    s[0]  s[1]  s[2]  s[3]
+
+Para armazenar uma string, o computador, sem você saber, tem usado um byte extra, todods os bits 0, escrito como \0 mas também conhecido como literalmente o valor 0.
+
+* Então, essa coisa de outra forma conhecida como null, é apenas um caractere especial.
+
+* Você pode tocar, olhar, mudar qualquer memória que você quiser. Você tem o poder de tocar qualquer posição na memória. E isso pode fazer com que programas de computador travem, incluindo programas em seu computador ( Mac ou pc), uma fonte de bugs comum. Por exemplo "HI!" possui 72, 23, 33, e 0, mas e se você pedir o item na posição 400 ?
+
+      printf("%i %i %i $i %i\n", s[0], s[1], s[2], s[3], s[400]
+      // Saída: 72 73 33 0 0
+
+  
