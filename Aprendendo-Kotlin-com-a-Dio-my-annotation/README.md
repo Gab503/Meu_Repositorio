@@ -16,3 +16,20 @@ A diferenciação entre os paradigmas de programação é feita através das té
         
     }
 
+**Para que serve os Paradigmas:** Reutilização de código. Os paradigmas da programação iram ajudar a reutilizar um código já escrito, com um modelo de como fazer várias coisas com um mesmo código. 
+
+* Programadores devem buscar não gerar bugs (erros no código), escrever seu código e o reutilizar, escrever códigos limpos,
+isto é, lembrar que outra pessoa ( ou você futuramente) poderá ler seu código e também que o computador possa entender e saber o que fazer.
+
+**Princípios da POO (Programação Orientada a Objetos):** 
+
+* Encapsulamento.
+  
+* Herança
+  
+* Abstração
+  
+* Polimorfismo
+    
+**O que é uma Classe ?**
+
