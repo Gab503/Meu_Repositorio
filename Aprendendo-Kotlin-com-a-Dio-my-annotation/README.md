@@ -79,7 +79,7 @@ O polimorfismo permite que objetos de diferentes classes sejam tratados de manei
      class Dog
      {
          var name: String? = null
-         // variável mutável chamada name do tipo(Isso que significa :) string, o ponto de interrogação significa que pode ser nulo (vazio). 
+         // variável mutável chamada name do tipo(Isso que significa :) string, o ponto de interrogação significa que pode ser nulo ("vazio"). 
      }
 
 Arquivo em execução:
