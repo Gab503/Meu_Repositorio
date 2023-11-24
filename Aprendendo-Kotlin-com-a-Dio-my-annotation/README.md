@@ -36,7 +36,7 @@ isto é, lembrar que outra pessoa ( ou você futuramente) poderá ler seu códig
 **Propriedades:** O termo "propriedades" é muitas vezes usado de forma intercambiável com "atributos". Em alguns contextos, "propriedades" pode ser usado para se referir especificamente aos atributos de uma classe que têm métodos associados, chamados de "métodos de propriedade". Esses métodos são usados para obter ou definir o valor de um atributo e podem incluir lógica adicional.
 
 **Métodos:** Além dos atributos, uma classe também define métodos. Métodos são funções ou procedimentos que podem ser executados pelos objetos da classe. No contecto "Carro", métodos podem incluir "ligar", "deligar", "acelerar", etc. Em termos simples, os métodos são ações que um objeto da classe pode realizar.
-
+Basicamente, os métodos em Kotlin são funções definidas dentro de uma classe. Eles representam o comportamento associado a uma instância específica da classe.
 
 * Encapsulamento.
 
@@ -95,6 +95,25 @@ Arquivo em execução:
 
  * Dentro da classe Dog há uma variável name, como está em uma classe chamamos ela de atributo / propriedade.
 
+       class Dog // Classe Dog
+       {
+           var name: String? = null  // Propriedade da classe
+    
+           fun sayHi() // Método da classe
+           {
+                println("Hi my name's $name")
+           }
+   
+       }  
 
+       fun main()
+       {
+           val dog = Dog() // Instância / objeto criado a partir da classe
+    
+           dog.name = "Linux" // Atribuir Linux a propriedade name da intância dog.
+    
+           dog.sayHi() // chamando o métod sayHi
+       }
 
+   
 
