@@ -184,6 +184,14 @@ Em muitas linguagens de programação, você precisa definir explicitamente os m
         dog.sayHi() 
     }
 
+**Private:** Quando você marca um membro de uma classe como private, você está dizendo que esse membro só deve ser acessado dentro da própria classe em que foi declarado. Ou seja, ele é "escondido" do código externo à classe.
+
+Isso proporciona encapsulamento, que é um dos princípios fundamentais da programação orientada a objetos. O encapsulamento permite que você controle o acesso aos detalhes internos de uma classe, fornecendo uma interface externa (métodos públicos e propriedades) enquanto mantém os detalhes internos (membros privados) ocultos e seguros.
+
+
+
+
+
 1. Declaração da classe Dog:
 
 É declarada uma classe chamada Dog que tem uma propriedade ownerName (inicializada pelo construtor) e uma propriedade opcional name.
@@ -254,7 +262,23 @@ Hi my name's Linux and my owner is Sara
 
 **Observação!** O mais importante em POO, é que cada classe tenha um objetivo, cada classe tem que ter um propósito. 
 
+**Data class:** Em Kotlin, uma "data class" (classe de dados) é uma classe especializada que é frequentemente usada para representar dados imutáveis. Ela é projetada para armazenar dados de maneira concisa e fornecer funcionalidades úteis automaticamente. Para criar uma data class em Kotlin, você pode usar a palavra-chave data antes da palavra-chave class.
 
+Uma data class em Kotlin é uma forma concisa de criar uma classe que é principalmente usada para armazenar dados. A palavra-chave data fornece automaticamente várias funcionalidades úteis que, de outra forma, você teria que escrever manualmente, economizando assim linhas de código e tornando o código mais legível.
+
+Ao usar uma data class, o Kotlin automaticamente gera implementações padrão para os seguintes métodos com base nas propriedades declaradas na classe:
+
+1. equals(): Compara os valores das propriedades de duas instâncias e verifica se são iguais.
+
+2. hashCode(): Gera um código de hash para a instância, útil ao usar a classe em estruturas de dados que dependem de hash.
+
+3. toString(): Cria uma representação de string da instância, útil para depuração.
+
+4. componentN(): Fornece funções de desestruturação para acessar as propriedades individualmente.
+
+Além disso, uma data class também inclui uma função copy(), que permite criar uma cópia modificada da instância com a capacidade de alterar alguns valores.
+
+Isso torna as data classes ideais para situações em que você precisa criar classes simples para armazenar dados e realizar operações comuns, sem a necessidade de escrever manualmente os métodos mencionados acima.
 
 
 
