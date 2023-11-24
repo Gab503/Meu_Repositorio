@@ -90,8 +90,9 @@ Arquivo em execução:
         dog.name = "Linux"
         println(" Ola ${dog.name}")
     }
+Em Kotlin, cada instância de uma classe possui suas próprias cópias das propriedades da classe.
 
- crio a classe Dog com um atributo name, dela instâncio dog ( crio um objeto chamado dog da classe Dog), e faço dog.name = "Linux" então o atributo name de dog recebe "Linux", e é imprimido Olá Linux.
+crio a classe Dog com um atributo name, dela instâncio dog ( crio um objeto chamado dog da classe Dog), e faço dog.name = "Linux" então o atributo name de dog recebe "Linux", e é imprimido Olá Linux.
 
  * Dentro da classe Dog há uma variável name, como está em uma classe chamamos ela de atributo / propriedade.
 
@@ -112,8 +113,145 @@ Arquivo em execução:
     
            dog.name = "Linux" // Atribuir Linux a propriedade name da intância dog.
     
-           dog.sayHi() // chamando o métod sayHi
+           dog.sayHi() // chamando o método sayHi
        }
 
-   
+*  Em kotlin funções são declaradas com a palavra-chave fun. 
+
+**Características das funções:**
+
+* Possuem entrada, input
+
+* Processa algo / faz alguma coisa.
+
+* Tem um retorno (saída)
+
+      class Dog 
+      {
+          var name: String? = null  
+    
+    
+          fun sayHi(ownerName: String) 
+         {
+             println("Hi $ownerName, my name's $name")
+         }
+      }
+
+      fun main()
+      {
+          val dog = Dog() 
+    
+          dog.name = "Linux" 
+          dog.sayHi(ownerName = "Bilbo Bouseiro")
+
+          val dogSara = Dog()
+          dogSara.name = "Android"
+         dogSara.sayHi(ownerName = "Sara")
+      }
+
+O método sayHi agora recebe um parâmetro ownerName do tipo String. Isso permite que o método saúda o proprietário do cachorro usando o nome do proprietário passado como argumento
+
+ownerName é um parâmetro do método sayHi. Quando você chama o método sayHi e fornece um valor para ownerName, esse valor é usado dentro do método para personalizar a saudação.
+
+**Getter (get):**
+
+O método get é utilizado para obter o valor de uma propriedade. Quando você acessa o valor de uma propriedade, implicitamente ou explicitamente, o método get correspondente é chamado.
+
+**Setter (set):**
+
+O método set é utilizado para atribuir um novo valor a uma propriedade. Quando você atribui um valor a uma propriedade, implicitamente ou explicitamente, o método set correspondente é chamado.
+
+Em muitas linguagens de programação, você precisa definir explicitamente os métodos get e set. No entanto, em Kotlin, esses métodos são gerados automaticamente para propriedades, a menos que você precise de um comportamento personalizado.
+
+    class Dog constructor(private val ownerName: String)
+    {
+        var name: String? = null  
+    
+        fun sayHi() 
+        {
+            println("Hi my name's $name and my owner is $ownerName")
+        }
+    }
+
+    fun main()
+    {
+        val dog = Dog(ownerName ="Bilbo Bouseiro") 
+    
+        dog.name = "Linux" 
+        dog.sayHi() 
+    }
+
+1. Declaração da classe Dog:
+
+É declarada uma classe chamada Dog que tem uma propriedade ownerName (inicializada pelo construtor) e uma propriedade opcional name.
+
+2. Construtor e Propriedade ownerName:
+
+O construtor primário da classe Dog recebe um parâmetro ownerName e o marca como private (acesso restrito à própria classe). Isso significa que ownerName é uma propriedade da classe e está acessível apenas dentro dela.
+
+3. Propriedade name:
+
+É declarada uma propriedade name, que é uma variável que pode armazenar um valor do tipo String ou null. Inicialmente, está configurada como null.
+
+4. Método sayHi():
+
+Um método chamado sayHi é declarado dentro da classe Dog. Este método imprime uma mensagem no console usando interpolação de strings, referenciando os valores das propriedades name e ownerName.
+
+5. Função main():
+
+Na função main, é criada uma instância da classe Dog chamada dog com o nome do proprietário definido como "Bilbo Bouseiro".
+
+6. Atribuição de Valor à Propriedade name:
+
+O valor da propriedade name do objeto dog é alterado para "Linux".
+
+7. Chamada do Método sayHi():
+
+O método sayHi do objeto dog é chamado. Este método imprime a mensagem formatada que inclui os valores de name e ownerName
+
+
+    class Dog 
+    {
+        var owner: Human? = null 
+        var name: String? = null  
+    
+        fun sayHi() 
+        {
+            println("Hi my name's $name and my owner is ${owner?.name}")
+        }
+    }
+
+    class Human
+    {
+        var name: String? = null
+    }
+
+    fun main()
+    {
+        val gab = Human()
+        gab.name = "Gabriela"
+    
+        val dog = Dog()
+        dog.owner = gab
+        dog.name = "Linux" 
+        dog.sayHi() 
+    
+        val sara = Human()
+        sara.name = "Sara"
+        dog.owner = sara
+        dog.sayHi()
+
+    }
+
+Saída:
+
+Hi my name's Linux and my owner is Gabriela
+
+Hi my name's Linux and my owner is Sara
+
+**Observação!** O mais importante em POO, é que cada classe tenha um objetivo, cada classe tem que ter um propósito. 
+
+
+
+
 
