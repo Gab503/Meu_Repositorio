@@ -280,5 +280,63 @@ Além disso, uma data class também inclui uma função copy(), que permite cria
 
 Isso torna as data classes ideais para situações em que você precisa criar classes simples para armazenar dados e realizar operações comuns, sem a necessidade de escrever manualmente os métodos mencionados acima.
 
+class Motor
+{
+    private var ligado: Boolean = false
+    
+    fun ligar()
+    {
+        ligado = true 
+    }
+    
+    fun deligar()
+    {
+        ligado = false
+    }
+    
+    fun status() : String
+    {
+        return if (ligado) "Ligado" else "Desligado"
+    }
+}
 
+class Carro
+{
+    var cor: String? = null
+    
+    fun partida()
+    {
+        
+    }
+    
+    fun anda()
+    {
+        println("Carro andando: vruun vrruuunnn! ")
+    }
+    
+    fun freia()
+    {
+        println("Freiando o Carro")
+    }
+    
+    fun buzina()
+    {
+        println("Bi-Bi Bi-Bi ")
+    }
+    
+}
+
+
+fun main()
+{
+    var motor = Motor()
+    motor.ligar()
+    println("O motor está ${motor.status()}")
+    
+    motor.deligar()
+    println("O motor está ${motor.status()}")
+    
+    val meu_carro = Carro()
+    meu_carro.anda()
+}
 
