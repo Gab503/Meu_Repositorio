@@ -90,6 +90,9 @@ Arquivo em execução:
         dog.name = "Linux"
         println(" Ola ${dog.name}")
     }
+
+Em Kotlin, os dois pontos são usados para denotar o tipo de uma variável, o tipo de retorno de uma função, a herança de uma classe, a implementação de interfaces e para associar anotações.
+    
 Em Kotlin, cada instância de uma classe possui suas próprias cópias das propriedades da classe.
 
 crio a classe Dog com um atributo name, dela instâncio dog ( crio um objeto chamado dog da classe Dog), e faço dog.name = "Linux" então o atributo name de dog recebe "Linux", e é imprimido Olá Linux.
