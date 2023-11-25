@@ -308,7 +308,7 @@ Isso torna as data classes ideais para situações em que você precisa criar cl
     
         fun gastandoCombustivel()
         {
-            println("Gastando Combustível, nível atual do tanque: $nivelCombustivel")
+            println("Gastando Combustível, nível atual do tanque: $nivelCombustivel litros")
             nivelCombustivel--
         }
     }
@@ -377,11 +377,13 @@ Melhorando a leitura deste código / Otimizando:
     
         fun ligar()
         {
+            println("Ligando o motor...)
             ligado = true 
         }
     
         fun desligar()
         {
+            println("Desligando o motor ...")
             ligado = false
         }
     
@@ -397,25 +399,22 @@ Melhorando a leitura deste código / Otimizando:
     
         fun gastandoCombustivel()
         {
-            println("Gastando Combustível, nível atual do tanque: $nivelCombustivel")
+            println("Gastando Combustível, nível atual do tanque: $nivelCombustivel litros")
             nivelCombustivel--
         }
     }
 
     class Carro constructor (private val motor: Motor) 
     {
-        var cor: String? = null
     
         fun ligar()
         {
-            println("Ligando o carro...")
             motor.ligar()
         }
     
         fun desligar()
         {
             motor.desligar()
-            println("Carro desligado")
         }
     
         fun anda()
@@ -423,7 +422,11 @@ Melhorando a leitura deste código / Otimizando:
             when
             {
                 !motor.estaLigado() -> println("Pro carro andar, precisa ligar o carro primeiro né!")
-                !motor.temCombustivel() -> println("Precisa de combustível! ")
+                !motor.temCombustivel() -> 
+                {
+                    println("Precisa de combustível! ") 
+                    motor.desligar()
+                }
                 else ->
                 {
                     motor.gastandoCombustivel()
@@ -453,5 +456,43 @@ Melhorando a leitura deste código / Otimizando:
         meu_carro.anda()
     }
 
+
+* Saída:
+
+      Ligando o carro...
+      Gastando Combustível, nível atual do tanque: 2 litros
+      Carro andando: vruun vrruuunnn!
+  
+      Gastando Combustível, nível atual do tanque: 1 litros
+      Carro andando: vruun vrruuunnn!
+  
+      precisa de combustível!
+
+ **código passo a passo:**
+
+1. **Classe `Motor`:**
+   - A classe `Motor` representa um motor de um veículo e possui as seguintes propriedades privadas:
+      - `ligado`: Indica se o motor está ligado (`true`) ou desligado (`false`).
+      - `nivelCombustivel`: Representa o nível de combustível no tanque do veículo.
+   - Métodos da classe `Motor`:
+      - `ligar()`: Liga o motor, configurando a propriedade `ligado` para `true`.
+      - `desligar()`: Desliga o motor, configurando a propriedade `ligado` para `false`.
+      - `estaLigado()`: Retorna `true` se o motor estiver ligado, `false` caso contrário.
+      - `temCombustivel()`: Retorna `true` se houver combustível suficiente, `false` caso contrário.
+      - `gastandoCombustivel()`: Simula o gasto de combustível, reduzindo o `nivelCombustivel` em 1 e imprimindo uma mensagem.
+
+2. **Classe `Carro`:**
+   - A classe `Carro` possui uma propriedade privada `motor` do tipo `Motor` (injetada através do construtor). Isso representa a composição de um carro contendo um motor.
+   - Métodos da classe `Carro`:
+      - `ligar()`: Liga o carro chamando o método `ligar()` do motor.
+      - `desligar()`: Desliga o carro chamando o método `desligar()` do motor.
+      - `anda()`: Verifica se o carro pode andar (está ligado e tem combustível) e simula o consumo de combustível chamando o método `gastandoCombustivel()` do motor.
+      - `freia()`: Simula a ação de frear o carro.
+      - `buzina()`: Simula o som da buzina do carro.
+
+3. **Função `main()`:**
+   - Cria uma instância de `Motor` chamada `motor`.
+   - Cria uma instância de `Carro` chamada `meu_carro`, passando a instância de `motor` como argumento para o construtor.
+   - Liga o carro, chama o método `anda()` três vezes, imprimindo mensagens correspondentes ao funcionamento do carro.
 
 
