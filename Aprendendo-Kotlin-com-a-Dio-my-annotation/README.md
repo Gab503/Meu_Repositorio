@@ -280,63 +280,177 @@ Além disso, uma data class também inclui uma função copy(), que permite cria
 
 Isso torna as data classes ideais para situações em que você precisa criar classes simples para armazenar dados e realizar operações comuns, sem a necessidade de escrever manualmente os métodos mencionados acima.
 
-class Motor
-{
-    private var ligado: Boolean = false
-    
-    fun ligar()
+    class Motor
     {
-        ligado = true 
-    }
+        private var ligado: Boolean = false
+        private var nivelCombustivel: Int = 2
     
-    fun deligar()
-    {
-        ligado = false
-    }
+        fun ligar()
+        {
+            ligado = true 
+        }
     
-    fun status() : String
-    {
-        return if (ligado) "Ligado" else "Desligado"
+        fun desligar()
+        {
+            ligado = false
+        }
+    
+        fun estaLigado() : Boolean
+        {
+            return ligado
+        }
+    
+        fun temCombustivel() : Boolean
+        {
+            return nivelCombustivel > 0
+        }
+    
+        fun gastandoCombustivel()
+        {
+            println("Gastando Combustível, nível atual do tanque: $nivelCombustivel")
+            nivelCombustivel--
+        }
     }
-}
 
-class Carro
-{
-    var cor: String? = null
-    
-    fun partida()
+    class Carro constructor (private val motor: Motor) 
     {
+        var cor: String? = null
+    
+        fun ligar()
+        {
+            println("Ligando o carro...")
+            motor.ligar()
+        }
+    
+        fun desligar()
+        {
+            motor.desligar()
+            println("Carro desligado")
+        }
+    
+        fun anda()
+        {
+            if (motor.estaLigado() && motor.temCombustivel())
+            {
+                println("Carro andando: vruun vrruuunnn! ")
+            }
+            else if (!motor.temCombustivel())
+            {
+                println("Precisa de combustével! ")
+            }
+            else
+            {
+                println("Pro carro andar, precisa ligar o carro primeiro né!")
+            }
         
-    }
+            motor.gastandoCombustivel()
+        }
     
-    fun anda()
-    {
-        println("Carro andando: vruun vrruuunnn! ")
-    }
+        fun freia()
+        {
+            println("Freiando o Carro")
+        }
     
-    fun freia()
-    {
-        println("Freiando o Carro")
-    }
+        fun buzina()
+        {
+            println("Bi-Bi Bi-Bi ")
+        }
     
-    fun buzina()
-    {
-        println("Bi-Bi Bi-Bi ")
     }
-    
-}
 
 
-fun main()
-{
-    var motor = Motor()
-    motor.ligar()
-    println("O motor está ${motor.status()}")
+    fun main()
+    {
+        var motor = Motor()
+        val meu_carro = Carro(motor)
+        meu_carro.ligar()
+        meu_carr0.anda()
+    }
+
+Melhorando a leitura deste código / Otimizando:
+
+    class Motor
+    {
+        private var ligado: Boolean = false
+        private var nivelCombustivel: Int = 2
     
-    motor.deligar()
-    println("O motor está ${motor.status()}")
+        fun ligar()
+        {
+            ligado = true 
+        }
     
-    val meu_carro = Carro()
-    meu_carro.anda()
-}
+        fun desligar()
+        {
+            ligado = false
+        }
+    
+        fun estaLigado() : Boolean
+        {
+            return ligado
+        }
+    
+        fun temCombustivel() : Boolean
+        {
+            return nivelCombustivel > 0
+        }
+    
+        fun gastandoCombustivel()
+        {
+            println("Gastando Combustível, nível atual do tanque: $nivelCombustivel")
+            nivelCombustivel--
+        }
+    }
+
+    class Carro constructor (private val motor: Motor) 
+    {
+        var cor: String? = null
+    
+        fun ligar()
+        {
+            println("Ligando o carro...")
+            motor.ligar()
+        }
+    
+        fun desligar()
+        {
+            motor.desligar()
+            println("Carro desligado")
+        }
+    
+        fun anda()
+        {
+            when
+            {
+                !motor.estaLigado() -> println("Pro carro andar, precisa ligar o carro primeiro né!")
+                !motor.temCombustivel() -> println("Precisa de combustível! ")
+                else ->
+                {
+                    motor.gastandoCombustivel()
+                    println("Carro andando: vruun vrruuunnn! ") 
+                }
+            }
+        }
+    
+        fun freia()
+        {
+            println("Freiando o Carro")
+        }
+    
+        fun buzina()
+        {
+            println("Bi-Bi Bi-Bi ")
+        } 
+    }
+
+    fun main()
+    {
+        var motor = Motor()
+        val meu_carro = Carro(motor)
+        meu_carro.ligar()
+        meu_carro.anda()
+        meu_carro.anda()
+        meu_carro.anda()
+    }
+
+
 
