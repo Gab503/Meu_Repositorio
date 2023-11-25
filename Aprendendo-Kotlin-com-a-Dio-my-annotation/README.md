@@ -280,6 +280,7 @@ Além disso, uma data class também inclui uma função copy(), que permite cria
 
 Isso torna as data classes ideais para situações em que você precisa criar classes simples para armazenar dados e realizar operações comuns, sem a necessidade de escrever manualmente os métodos mencionados acima.
 
+
     class Motor
     {
         private var ligado: Boolean = false
