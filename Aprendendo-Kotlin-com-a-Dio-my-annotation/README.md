@@ -647,5 +647,9 @@ Ao marcar uma função com override, você está informando ao compilador que es
 **Composição:** A classe Carro possui um membro do tipo Motor, demonstrando composição ao encapsular um objeto dentro de outro.
 Essas características tornam o código mais modular, reutilizável e fácil de entender.
 
+* Aviso !!! Usar muitas heranças em seu código vai dar problemas !!! Em vez disso, utilize composições.
+
+**Composição:** Composição é um princípio da Programação Orientada a Objetos (POO) que envolve a construção de objetos complexos através da combinação de objetos mais simples ou componentes. Em vez de herdar comportamentos de uma classe pai, uma classe utiliza instâncias de outras classes para compor seu próprio comportamento. Esse conceito promove a reutilização de código de uma maneira mais flexível e modular do que a herança.
+
 
 
