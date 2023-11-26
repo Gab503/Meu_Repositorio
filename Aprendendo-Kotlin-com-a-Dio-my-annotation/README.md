@@ -496,3 +496,18 @@ Melhorando a leitura deste código / Otimizando:
    - Liga o carro, chama o método `anda()` três vezes, imprimindo mensagens correspondentes ao funcionamento do carro.
 
 
+**Funções Abstratas:** Funções abstratas são funções que são declaradas em uma classe, mas não são implementadas nessa classe. A implementação real da função é fornecida pelas subclasses dessa classe. Em outras palavras, uma função abstrata define uma assinatura (nome, parâmetros e tipo de retorno), mas não fornece uma implementação concreta.
+
+Em linguagens de programação que suportam programação orientada a objetos, como Java, C++, ou Kotlin, as funções abstratas são muitas vezes usadas em conjunto com o conceito de classes abstratas ou interfaces.
+
+Esse mecanismo permite definir comportamentos comuns em uma classe base enquanto fornece flexibilidade para implementações específicas em subclasses. Isso é uma parte importante do polimorfismo, que é a capacidade de tratar objetos de diferentes classes de maneira uniforme.
+
+A utilização da palavra-chave override (sobrescrever) em uma linguagem de programação orientada a objetos, como Kotlin, é uma forma de indicar explicitamente que você está fornecendo uma implementação específica para uma função que foi declarada como abstrata na classe base (superclasse) ou definida em uma interface.
+
+Ao marcar uma função com override, você está informando ao compilador que está substituindo a implementação da função da classe pai. Isso é uma garantia para o compilador e para quem está lendo o código, indicando que a função na subclasse tem a mesma assinatura (nome, parâmetros e tipo de retorno) que a função na classe base.
+
+
+
+
+
+
