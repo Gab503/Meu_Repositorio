@@ -506,8 +506,146 @@ A utilização da palavra-chave override (sobrescrever) em uma linguagem de prog
 
 Ao marcar uma função com override, você está informando ao compilador que está substituindo a implementação da função da classe pai. Isso é uma garantia para o compilador e para quem está lendo o código, indicando que a função na subclasse tem a mesma assinatura (nome, parâmetros e tipo de retorno) que a função na classe base.
 
+    abstract class Motor
+    {
+        private var ligado: Boolean = false
+    
+        fun ligar()
+        {
+            println("Ligando o motor...")
+            ligado = true 
+        }
+
+        fun desligar()
+        {
+            println("Desligando o motor ...")
+            ligado = false
+        }
+    
+        fun estaLigado() : Boolean
+        {
+            return ligado
+        }
+    
+        abstract fun temAutonomia() : Boolean
+    
+        abstract fun gastando()
+    }
+
+    class MotorEletrico : Motor()
+    {
+        private var ligado: Boolean = false
+        private var nivelBateria: Int = 1
+
+        override fun gastando()
+        {
+            println("Gastando Energia. Nível atual: $nivelBateria ")
+            nivelBateria--
+        }
+    
+        override fun temAutonomia() : Boolean
+        {
+            return nivelBateria> 0
+        }
+    }
+
+    class MotorCombustao : Motor()
+    {
+        private var ligado: Boolean = false
+        private var nivelCombustivel: Int = 2
+    
+        override fun gastando()
+        {
+            println("Gastando Combustível, nível atual do tanque: $nivelCombustivel litros")
+            nivelCombustivel--
+        }
+    
+        override fun temAutonomia() : Boolean
+        {
+            return nivelCombustivel > 0
+        }
+    }
+
+    class Carro constructor (private val motor: Motor)
+    {
+
+        fun ligar()
+        {
+            motor.ligar()
+        }
+
+        fun desligar()
+        {
+            motor.desligar()
+        }
+
+        fun anda()
+        {
+            when
+            {
+                !motor.estaLigado() -> println("Pro carro andar, precisa ligar o carro primeiro né!")
+                !motor.temAutonomia() -> 
+                {
+                    when(motor) 
+                    {
+                        is MotorEletrico -> println("Precisa Recarregar!")
+                        is MotorCombustao -> println("Precisa de Combustível !")
+                    }
+                    motor.desligar()
+                }
+                else ->
+                {
+                    motor.gastando()
+                    when(motor) 
+                    {
+                        is MotorEletrico -> println("Carro Andando...")
+                        is MotorCombustao -> println("Carro Andando: vruum vrruum !")
+                    }
+                }
+            }
+        }
+
+        fun freia()
+        {
+            println("Freiando o Carro")
+        }
+
+        fun buzina()
+        {
+            println("Bi-Bi Bi-Bi ")
+        } 
+    }
+
+    fun main()
+    {
+        var motorCombustao = MotorCombustao()
+        val meu_carro = Carro(motorCombustao)
+        meu_carro.ligar()
+        meu_carro.anda()
+        meu_carro.anda()
+        meu_carro.anda()
+       
+        val motorEletrico = MotorEletrico()
+        val tesla = Carro(motorEletrico)
+        tesla.ligar()
+        tesla.anda()
+        tesla.anda()
+        tesla.anda()
+    }
 
 
+#### características de POO presentes no código:
+
+**Abstração:** A classe abstrata Motor define operações comuns a todos os motores, como ligar, desligar, verificar se está ligado, verificar a autonomia e simular o gasto de combustível ou energia.
+
+**Herança:** MotorEletrico e MotorCombustao herdam da classe abstrata Motor, estendendo suas funcionalidades e fornecendo implementações específicas.
+
+**Polimorfismo:** As funções gastando() e temAutonomia() são abstratas em Motor e são implementadas de forma polimórfica nas subclasses MotorEletrico e MotorCombustao.
+
+**Encapsulamento:** A visibilidade privada (private) de variáveis como ligado, nivelBateria, nivelCombustivel encapsula o estado interno das classes e limita o acesso direto a essas variáveis.
+
+**Composição:** A classe Carro possui um membro do tipo Motor, demonstrando composição ao encapsular um objeto dentro de outro.
+Essas características tornam o código mais modular, reutilizável e fácil de entender.
 
 
 
