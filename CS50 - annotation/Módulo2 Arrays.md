@@ -186,6 +186,14 @@ alguma capacidade de exibir informações ou apresentar informações a um human
 Há um bug nesse programa, cujo objetivo é imprimir 10 hash verticalmente. E através do primeiro printf podemos analisar melho este bug.
 Ao executar este programa, verá que começa no 0, e não no 1 para resolver isso:
 
+LEmbrando o loop for: 
+
+    for (inicialização; condição; incremento/decremento)
+    {
+        // código a ser executado repetidamente
+    }
+  .
+  
     for (int i = 1; i <= 10; i++);
 
 #### Mas e se o código tive muitas linhas, vai precisar colocar printf para cada variável ? Para cada operação que for feita etc ?
@@ -511,5 +519,103 @@ Para armazenar uma string, o computador, sem você saber, tem usado um byte extr
 
       printf("%i %i %i $i %i\n", s[0], s[1], s[2], s[3], s[400]
       // Saída: 72 73 33 0 0
+
+
+  .
+
+      #include <stdio.h>
+      #include <cs50.h>
+
+      int main(void)
+      {
+          string s = get_string("Input: ");
+          printf("Output: ");
+          for (int i = 0; s[i] != '\0'; i++)
+          {
+              printf("%c", s[i]);
+          }
+              printf("\n");
+      }
+
+a função strlen( ) nos dá o comprimento de uma string.
+
+    #include <stdio.h>
+    #include <cs50.h>
+    #include <string.h>
+
+    int main(void)
+    {
+        string s = get_string("Input: ");
+        printf("Output: ");
+        for (int i = 0; i < strlen(s); i++) 
+        {
+            printf("%c", s[i]);
+        }
+        printf("\n");
+    }
+
+    saída:
+    $ Input: Hello
+    $Output: Hello
+
+Para saber o comprimento de HI! vai demorar 4 passos, a cada passo perguntando se está na barra invertida 0 (\0).
+
+e este código acima está perguntando o comprimento da sting repetidas vezes, ou seja, possui uma designer ruim.
+
+    #include <stdio.h>
+    #include <cs50.h>
+    #include <string.h>
+
+    int main(void)
+    {
+        string s = get_string("Input: ");
+        printf("Output: ");
+
+        for (int i = 0, n = strlen(s); i n; i++)
+        {
+            printf("%c", s[i]);
+        }
+        printf("\n");
+    }
+
+suponha que temos um arrat com 2 palavras:
+
+    string words[2];
+    words[0] = "HI!";
+    words[1] = "BYE!";
+
+Uma string é um array, mas aqui temos um array de strings. Então temos um array de um array. Portanto, temos um array de palavras, mas palavra é apenas uma string, e uma string é uma array de caracteres. Então temos uma array de arrays.
+
+     _________________________________________________________________________________________
+     |    H     |    I      |    !     |  \n      |          |          |          |          |
+    words[0][0] words[0][1] words[0][2] words[0][3]
+     __________________________________________________________________________________________
+     |    B     |     Y     |   E      |     !    |   \0     |          |          |          |
+    words[1][0] words[1][1] words[1][2] words[1][3] words[1][4]
+     __________________________________________________________________________________________
+
+O primeiro colchete refere-se à palavra que você deseja no array ( 0 é HI!). O segundo colchete refere-se ao caractere que você deseja nessa palavra. Exemplo
+
+    words[0][0] == [HI!] [H]
+    words[0][1] == [HI!] [I]
+    words[0][2] == [HI!] [!]
+    words[0][3] == [HI!] [\0}
+
+    words[1][0] == [BYE!] [B]
+    words[1][1] == [BYE!] [Y]
+    words[1][2] == [BYE!] [E]
+    words[1][3] == [BYE!] [!]
+    words[1][4] == [BYE!] [\0]
+
+É quase como se fosse um sistema de cordenadas ou matrizes. É um array bidimeensional ou um array de arrays.
+
+Se quiséssemos pensar em arrays de strings como caracteres individuais, nós podemos.
+
+
+
+
+
+
+
 
   
