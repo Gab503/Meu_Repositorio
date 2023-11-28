@@ -1190,3 +1190,446 @@ true
 false
 true
 
+# Sealed class
+Uma sealed class no Kotlin é como uma caixa lacrada de objetos. Você só pode criar novos objetos
+da sealed class dentro do próprio arquivo onde a sealed class foi definida. E você só pode usar objetos da sealed
+class em expressões when, o que garante que você sempre considere todos os casos possíveis.
+        
+Uma analogia para sealed classes é um restaurante de fast food. O restaurante tem um menu fixo de itens, 
+e você só pode pedir itens do menu. Você não pode trazer sua própria comida ou criar novos itens de menu. E 
+quando você faz um pedido, o restaurante garante que você receba o que pediu.
+
+    sealed class Mammal(val name: String)
+    class Cat(val catName: String) : Mammal(catName)
+    class Human(val humanName: String, val job: String) : Mammal(humanName)
+
+    fun greetMammal(mammal: Mammal) : String
+    {
+        when (mammal)
+        {
+            is Human -> return "Hello ${mammal.name}; you're working as a ${mammal.job}"
+            is Cat -> return "Hello ${mammal.name}"
+        }
+    }
+
+    fun main()
+    {
+        println(greetMammal(Cat("Snowy")))
+    }
+
+Este código define uma classe sealed chamada Mammal com uma única propriedade, name. A classe sealed Mammal só 
+pode ser estendida por classes definidas no mesmo arquivo.
+
+ Duas classes são derivadas da classe sealed Mammal: Cat e Human. A classe Cat possui uma propriedade adicional, catName. 
+ A classe Human possui duas propriedades adicionais, humanName e job.
+        
+ A função greetMammal() recebe um objeto Mammal como parâmetro e retorna uma string de saudação. A função usa uma expressão 
+ when para determinar o tipo do objeto Mammal e retornar a string de saudação apropriada.
+        
+ A função main() cria um objeto Cat chamado Snowy e chama a função greetMammal() para saudar o gato. A 
+ saída do programa é a seguinte:
+ 
+  Hello Snowy
+
+  # Object Keyword
+A palavra-chave object em Kotlin tem dois usos principais:
+
+Para declarar uma classe singleton. Uma classe singleton é uma classe que só pode ter uma instância. 
+Para declarar uma classe singleton, use a palavra-chave object em vez de class.
+    
+Para declarar um objeto anônimo. Um objeto anônimo é um objeto que é criado sem um nome. Para declarar um objeto anônimo, 
+use a palavra-chave object seguida de um bloco de código.
+
+    // Declara uma classe singleton
+    object Logger
+    {
+        fun log(message: String) 
+        {
+            println(message)
+        }
+    }
+
+    // Usa a classe singleton
+    Logger.log("Hello, world!")
+
+    // Declara um objeto anônimo
+    val myObject = object
+    {
+        val name = "John Doe"
+        val age = 30
+     }
+
+    // Usa o objeto anônimo
+    println(myObject.name) // Imprime "John Doe"
+    println(myObject.age) // Imprime 30
+
+Uso de classes singleton:
+  
+Classes singleton são úteis para representar recursos compartilhados, como um banco de dados ou uma conexão com a 
+internet. Elas também são úteis para representar estados, como o estado de um jogo ou a configuração de um aplicativo.
+Uso de objetos anônimos:
+
+Objetos anônimos são úteis para criar objetos rapidamente sem precisar declarar uma classe. Eles também são úteis 
+para representar objetos que são usados apenas temporariamente.
+
+# Funções de Escopo LET 
+
+**Funções de Escopo:** Let, Run, With, Apply, Also.
+
+Permite que você execute um bloco de código se o objeto não for nulo, retornando um resultado opcional.
+Pode ser útil para operações em um objeto não nulo.
+
+Pode ser comparado a uma estrutura condicional que executa um bloco de código se uma condição
+(o objeto não ser nulo) for verdadeira.
+
+A função let em Kotlin é uma função de escopo que permite executar um bloco de código com um objeto como contexto.
+O resultado do bloco de código é o valor retornado pela função let.
+
+ O argumento da função let é o objeto que será usado como contexto. O nome do argumento é it, mas pode ser nomeado de 
+ outra forma.
+ 
+O bloco de código é executado com o objeto como contexto. O objeto pode ser acessado usando o nome do argumento it. 
+    
+O resultado do bloco de código é o valor retornado pela função let.<br>Em geral, a função let é uma maneira conveniente 
+de executar um bloco de código com um objeto como contexto. Pode ser usada para vários fins, incluindo validação,
+operações e transformações.
+
+      
+    fun customPrint(s: String)
+    {
+        print(s.uppercase())
+    }
+    
+    fun main()
+    {
+        
+        val empty = "test".let{
+            customPrint(it)
+            it.isEmpty()
+        }
+        println("is empty: $empty")
+        
+        fun printNonNull(str: String?)
+        {
+            println("Printing \"$str\":")
+            
+            str?.let
+            {
+                print("\t")
+                customPrint(it)
+                println()
+            }
+        }
+        
+        fun printIfBothNonNull(strOne: String?, strTwo: String?)
+        {
+            strOne?.let{firstString ->
+                strTwo?.let{secondString ->
+                    customPrint("$firstString : $secondString")
+                    println()
+                }
+        }
+    }
+        
+        printNonNull(null)
+        printNonNull("my string")
+        printIfBothNonNull("First", "Second")
+        
+    }
+
+**Função customPrint():**
+
+Esta função pega uma string como parâmetro e imprime a versão em maiúsculas da string.
+    
+**Função let():**
+        
+A função let() é uma função de escopo que permite executar um bloco de código com um objeto como contexto.
+O resultado do bloco de código é o valor retornado pela função let().
+        
+**Chamada da função let() na função main():**
+        
+ A primeira chamada da função let() na função main() é usada para imprimir a string "test" em maiúsculas e 
+ verificar se ela está vazia. O resultado da verificação de vazio é retornado pela função let().
+        
+  A segunda chamada da função let() na função main() é usada para imprimir a string "my string" em maiúsculas, 
+  se ela não for nula.
+        
+ A terceira chamada da função let() na função main() é usada para imprimir a string "First : Second", se ambas 
+ as strings forem não nulas.
+        
+  Saída do programa:
+    TEST is empty: false
+    Printing "null":
+    Printing "my string":
+        MY STRING
+    FIRST : SECOND
+
+# Função de escopo Run
+ Executa um bloco de código em um contexto específico (o receptor do run), podendo modificar o objeto e retornar um resultado opcional. Pode ser usado para configurar propriedades de um objeto durante sua criação.
+
+Pode ser comparado a executar código dentro do próprio objeto, independente de ele ser nulo ou não.
+
+    fun main()
+    {
+    
+        fun getNullableLength(ns: String?) 
+	{
+            println("for \"$ns\":")
+            ns?.run{
+                println("\tis empty? " + isEmpty())
+                println("\tlength = $length")
+                length
+            }
+        }
+        getNullableLength(null)
+        getNullableLength("")
+        getNullableLength("some string with Kotlin ")
+    }
+
+A função getNullableLength usa a extensão run da classe String?. A extensão run permite executar um bloco de código se a string não for nula.
+
+ O bloco de código executado pela extensão run imprime se a string está vazia e o seu comprimento, e retorna o comprimento da string.
+
+Saída:
+
+    for "null":
+    for "":
+	is empty? true
+	length = 0
+    for "some string with Kotlin ":
+	is empty? false
+	length = 24
+
+
+ # with
+
+A função with em Kotlin permite que você execute um bloco de código dentro do contexto de um objeto. Isso 
+significa que você pode acessar as propriedades e métodos do objeto dentro do bloco de código sem ter que especificar 
+explicitamente o nome do objeto.
+
+A função with recebe dois argumentos: o objeto no qual você deseja executar o bloco de código e o próprio bloco de código. 
+O bloco de código pode ser uma expressão ou uma declaração.
+
+ É como ter uma conversa com alguém e referenciar diretamente o que a pessoa está dizendo, sem usar "você disse" a cada frase.
+
+    class Configuration(var host: String, var port: Int)
+
+    fun main()
+    {
+        val configuration = Configuration(host = "127.0.0.1", port = 9000)
+    
+    with(configuration)
+    {
+        println("$host:$port")
+    }
+    
+    // instead of: 
+    println("${configuration.host}:${configuration.port}")
+     } 
+
+
+# Apply
+ A função apply é usada para configurar as propriedades de um objeto durante sua criação. Ela retorna o próprio objeto 
+ após as modificações.
+ 
+Imagine comprar um carro e personalizá-lo na própria concessionária antes de dirigir para casa.
+
+
+    data class Person(var name: String, var age: Int, var about: String)
+    {
+        constructor(): this("",0, "")
+        
+    }
+    
+    fun main()
+    {
+        val jake = Person()
+        val stringDescription = jake.apply
+        {
+            name = "Jake"
+            age = 30
+            about = "Android developer"
+        }.toString()
+        
+        println(stringDescription)
+    }
+
+O código acima define uma classe de dados chamada Person com três propriedades: name, age e about. A classe de dados
+também tem dois construtores: um construtor primário que leva três parâmetros e um construtor secundário sem parâmetros.
+    
+A função main() cria uma nova instância da classe Person chamada jake. Em seguida, a função usa a função de escopo apply 
+para modificar as propriedades do objeto jake. A função apply recebe um bloco de código como argumento e executa o bloco 
+de código dentro do contexto do objeto especificado.
+
+Neste caso, a função apply é usada para definir o nome, a idade e a descrição de Jake. 
+    
+Exemplo de saída:
+
+    Person(name=Jake, age=30, about=Android developer)
+
+Vantagens de usar a função apply:
+
+A função apply pode ser usada para modificar as propriedades de um objeto de forma concisa e elegante. 
+Ela também torna o código mais legível, porque fica claro que o código dentro do bloco de código apply está 
+operando no objeto especificado.
+        
+  Desvantagens de usar a função apply
+        
+A função apply pode tornar o código menos legível, especialmente se o bloco de código for longo ou complexo. 
+No entanto, esta desvantagem pode ser mitigada usando a função also, que é semelhante à função apply, mas o valor de
+retorno da função é o próprio objeto, não o valor retornado pelo bloco de código.
+
+# Also
+A função also permite fazer modificações ou realizar operações no objeto, mas ela retorna o próprio objeto original.
+Ela é útil para fazer anotações ou realizar ações enquanto mantém o objeto inalterado.
+
+Pode ser comparada a fazer anotações em um mapa enquanto mantém o mapa original sem alterações.
+
+A função also oferece uma flexibilidade adicional, pois permite que você faça modificações no objeto e, 
+ao mesmo tempo, mantenha o objeto original intacto. Assim, você pode realizar uma variedade de ações, incluindo aquelas 
+que envolvem o objeto original e/ou a versão modificada, conforme necessário.
+
+    
+    data class Person(var name: String, var age: Int, var about: String)
+    {
+        constructor(): this("",0, "")
+        
+    }
+    
+    fun writeCreationLog(p: Person)
+    {
+        println("A new person ${p.name} was created.")
+    }
+    
+    fun main()
+    {
+        
+        val jake = Person("Jeke", 30, "Adroid developer")
+        .also{
+            writeCreationLog(it)
+        }
+    }
+
+O código acima define uma classe de dados chamada Person com três propriedades: name, age e about. A classe 
+de dados também tem dois construtores: um construtor primário que leva três parâmetros e um construtor secundário 
+sem parâmetros.
+
+A função writeCreationLog() imprime uma mensagem para o console informando que uma nova pessoa foi criada.
+
+A função main() cria uma nova instância da classe Person chamada jake com os valores fornecidos para as propriedades name,
+age e about.
+
+Em seguida, a função main() usa a função de escopo also para executar a função writeCreationLog() com o objeto jake 
+como argumento. A função also recebe um bloco de código como argumento e executa o bloco de código dentro do 
+contexto do objeto especificado.
+
+Neste caso, a função also é usada para imprimir uma mensagem para o console informando que uma nova pessoa chamada 
+Jake foi criada.
+
+Exemplo de saída:
+
+    A new person Jake was created.
+
+# Infix function
+uma infix function é uma forma de escrever operações de uma maneira mais amigável e fácil de entender, 
+especialmente quando se trata de ações que você faria naturalmente de forma "infixada", como somar, subtrair, etc.
+
+A notação infix permite que você chame uma função sem usar o ponto (.), tornando a chamada da função mais concisa 
+e sem a necessidade de parênteses. Com a notação infix, você pode escrever a chamada da função de uma maneira que se
+assemelha mais a uma expressão direta. Essa abordagem pode tornar o código mais legível em alguns casos.
+
+    fun main()
+    {
+        infix fun Int.time(str: String) = str.repeat(this)
+        println(2 times "Bye")
+    
+        val pair = "Ferrari" to "Katrina"
+        println(pair)
+    
+        infix fun String.onto(other: String) = Pair(this, other)
+        val myPair = "McLaren" onto "Lucas"
+        println(myPair)
+    
+        val sophia = Person("Sophia")
+        val claudia = Person("Claudia")
+        sophia likes claudia
+    }
+
+    class Person(val name: String) 
+    {
+        val likedPeople = mutableListOf<Person>()
+        infix fun likes(other: Person) {likedPeople.add(other)}
+    }
+
+
+
+ 1. fun main() : Início da função principal do programa.
+
+2. infix fun Int.time(str: String) = str.repeat(this): Define uma função infix chamada time que estende a classe Int.
+ Essa função concatena uma string (str) repetindo-a a quantidade de vezes especificada pelo valor do inteiro.
+
+3. println(2 times "Bye"): Chama a função time de forma infixada, resultando na impressão de "ByeBye"
+(a string "Bye" repetida duas vezes).
+
+4. val pair = "Ferrari" to "Katrina": Cria um par de strings usando a notação to. O par resultante é armazenado na variável pair.
+
+5. println(pair): Imprime o par de strings "Ferrari" e "Katrina".
+
+6. infix fun String.onto(other: String) = Pair(this, other): Define uma função infix chamada onto que estende a
+ classe String. Essa função cria um par (Pair) com o receptor da função (this) e o parâmetro other.
+
+7. val myPair = "McLaren" onto "Lucas": Chama a função onto de forma infixada, criando um par de strings
+ ("McLaren" e "Lucas"). O par resultante é armazenado na variável myPair.
+
+8. println(myPair): Imprime o par de strings "McLaren" e "Lucas".
+
+9. val sophia = Person("Sophia"): Cria uma instância da classe Person chamada sophia com o nome "Sophia".
+
+10. val claudia = Person("Claudia"): Cria uma instância da classe Person chamada claudia com o nome "Claudia".
+
+11. sophia likes claudia: Chama a função infix likes da instância sophia da classe Person, indicando que
+ "Sophia" gosta de "Claudia". A função likes adiciona "Claudia" à lista de pessoas gostadas por "Sophia".
+
+12. class Person(val name: String): Define uma classe Person com uma propriedade name e uma
+lista likedPeople para armazenar pessoas gostadas.
+
+13. infix fun likes(other: Person) { likedPeople.add(other) }: Define uma função infix chamada likes que adiciona uma pessoa
+ à lista de pessoas gostadas (likedPeople).
+
+# Operator Function
+As operator functions em Kotlin são funções que permitem que você use operadores como +, -, *, / e outros, 
+de maneira personalizada em seus tipos definidos pelo usuário. Assim como as infix functions, as operator functions também 
+são usadas para melhorar a legibilidade e expressividade do código.
+
+Para criar uma operator function, você precisa usar uma palavra-chave específica, como operator, e fornecer uma 
+implementação específica para o operador que você deseja sobrecarregar
+
+    fun main()
+    {
+       operator fun Int.time(str: String) = str.repeat(this)
+       println(2 * "Bye")
+    
+       operator fun String.get(range: IntRange) = substring(range)
+       val str = "Always forgive your enemies; nothing annoys them so much"
+       println(str[0..14])
+    }
+
+# Higher Order Function
+As operator functions em Kotlin são funções que permitem que você use operadores como +, -, *, / e outros, 
+de maneira personalizada em seus tipos definidos pelo usuário. Assim como as infix functions, as operator functions também 
+são usadas para melhorar a legibilidade e expressividade do código.
+
+Para criar uma operator function, você precisa usar uma palavra-chave específica, como operator, e fornecer uma 
+implementação específica para o operador que você deseja sobrecarregar
+
+    fun main()
+    {
+       operator fun Int.time(str: String) = str.repeat(this)
+       println(2 * "Bye")
+    
+       operator fun String.get(range: IntRange) = substring(range)
+       val str = "Always forgive your enemies; nothing annoys them so much"
+       println(str[0..14])
+    }
+
+
