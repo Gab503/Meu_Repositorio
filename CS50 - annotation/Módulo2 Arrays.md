@@ -634,7 +634,58 @@ Se quiséssemos pensar em arrays de strings como caracteres individuais, nós po
         printf("\n")
     }
 
-97 se tronará 65 passando para miúscula. Lembre-se do ASCII. 
+97 se tronará 65 passando para miúscula. Lembre-se do ASCII. Melhorando o código: 
+
+    #include <stdio.h>
+    #include <ctype.h>
+    #include <cs50.h>
+    #include <string.h>
+
+    int main(void)
+    {
+        string s = get_string("Before: ");
+        printf("After: ");
+
+        for (int i = 0, n = strlen(s); i < n; i++)
+        {
+            if (islower(s[i]))
+            {
+                printf("%c", toupper(s[i]));
+            }
+            else
+            {
+                printf("%c", s[i]);
+            }
+        }
+        printf("\n");
+    }
+
+    
+Otimizando:
+
+    #include <stdio.h>
+    #include <ctype.h>
+    #include <cs50.h>
+    #include <string.h>
+
+    int main(void)
+    {
+        string s = get_string("Before: ");
+        printf("After: ");
+
+        for (int i = 0, n = strlen(s); i < n; i++)
+        {
+            printf("%c", toupper(s[i]));
+        }
+        printf("\n");
+    }
+
+A função toupper coloca tudo o que estiver em letras minúsculas em maiúsculas, portanto não precisa verificar se é minúscula ou um else para caso já estiver em letras maiúsculas.
+
+File name argv.c 
+
+
+
 
 
 
