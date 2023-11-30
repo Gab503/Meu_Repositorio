@@ -684,6 +684,8 @@ A função toupper coloca tudo o que estiver em letras minúsculas em maiúscula
 
 File name argv.c 
 
+* Vetor é uma maneira elegante de dizer listas. É uma variável que irá armazenar em um array todas as string. 
+
 
 
 
