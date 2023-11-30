@@ -611,6 +611,30 @@ O primeiro colchete refere-se à palavra que você deseja no array ( 0 é HI!). 
 
 Se quiséssemos pensar em arrays de strings como caracteres individuais, nós podemos.
 
+    #include <stdio.h>
+    #include <cs50.h>
+    #include <string.h>
+
+    int main(void)
+    {
+        string s = get_string("Before: ");
+        printf("After: ");
+
+       for (int i = 0, n = strlen(s); i < n; i++)
+        {
+            if (s[i] >= 'a' && s[i] <= 'z')
+            {
+                printf("%c", s[i] - 32);
+            }
+            else
+            {
+                printf("%C", s[i]);
+            }
+        }
+        printf("\n")
+    }
+
+97 se tronará 65 passando para miúscula. Lembre-se do ASCII. 
 
 
 
