@@ -1,5 +1,5 @@
 
-**Pontos Essenciais**
+**Breve Resumo:**
 
 1. **Coleta de Dados:** Aprender a coletar dados de fontes relevantes e confiáveis é fundamental. Isso inclui a compreensão das necessidades das partes interessadas e a obtenção dos dados certos para resolver problemas específicos.
 
