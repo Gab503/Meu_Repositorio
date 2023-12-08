@@ -1,4 +1,4 @@
-**Pontos Essenciais:**
+**Breve Resumo:**
 
 1. **Coleta de Dados:**
    - Essencial entender como coletar dados relevantes para o trabalho.
