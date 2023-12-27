@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Domínio e Hospedagem</h1>
+    <h1>02 Domínio e Hospedagem</h1>
     <p>Para outras pessoas acessarem o seu site, você precisa de um domínio, e também precisa de um local para guardar os arquivos que você desenvolve, esse lugar para guardar chamamos de hospedagem. 
     </p>
     <p>Domínio: É o nome que identifica o seu site, um nome único (Exemplo, Instagram.com). Geralmente é pago anualmente para mantê-lo. Há vários TLDs (Top Levek Domain)</p>
