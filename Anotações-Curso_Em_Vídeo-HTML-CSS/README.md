@@ -55,7 +55,7 @@
 <p>Full Stack: É ambas as áreas.</p>
 <hr>
 
-<h1>04 Hello world!</h1>
+<h1>Hello world!</h1>
 <hr>
 <p>Esse é o meu primeiro documento HTML! estou muito feliz!</p>
 <hr>
