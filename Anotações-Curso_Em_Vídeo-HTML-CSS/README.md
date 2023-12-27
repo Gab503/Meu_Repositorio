@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aprendendo HTML-CSS</title>
+    <title> Aprendendo HTML-CSS </title>
 </head>
 <body>
     <h1>A história da Internet</h1>
@@ -37,8 +37,8 @@
 
 <hr>
 
-    <h1>Domínio e Hospedagem</h1>
-    <p>Para outras pessoas acessarem o seu site, você precisa de um domínio, e também precisa de um local para guardar os arquivos que você desenvolve, esse lugar para guardar chamamos de hospedagem. 
+ <h1>Domínio e Hospedagem</h1>
+ <p>Para outras pessoas acessarem o seu site, você precisa de um domínio, e também precisa de um local para guardar os arquivos que você desenvolve, esse lugar para guardar chamamos de hospedagem. 
     </p>
     <p>Domínio: É o nome que identifica o seu site, um nome único (Exemplo, Instagram.com). Geralmente é pago anualmente para mantê-lo. Há vários TLDs (Top Levek Domain)</p>
 
