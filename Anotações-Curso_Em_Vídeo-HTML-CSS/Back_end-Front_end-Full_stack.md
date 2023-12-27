@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-   <h1>Front-end Back-end e Full stack</h1>
+   <h1>03 Front-end Back-end e Full stack</h1>
    <p>Front-end: Client-Side. Desenvolvedor do lado do cliente. Gera a parte visual e iterativa do site. Linguagens: JavaScript, HTML, CSS.</p>
 
    <p>Back-end: Servir-Sider. Desenvolvedor ao lado do servidor. Foca na iteração do código com o servidor. Envolve bancos de dados. Linguagens: PHP, JavaScript, C#, Python entre outras.</p>
