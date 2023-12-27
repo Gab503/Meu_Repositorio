@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>A história da Internet</h1>
+    <h1>01 A história da Internet</h1>
     <p>Surgiu durante a Guerra Fria para cumprir seus objetivos. <br>O presidente Dwight Eisenhower fundou uma agência de estudos de tecnologias para a guerra, a DARPA, existente até os dias atuais.</p>
       <p> Em 1969 para evitar perda de dados (ter um Backup) em caso de um ataque da URSS, eles inventaram a ARPANET, uma pequena rede com inicialmente 4 pontos, com 4 computadores ("primitivos") cujo o objetivo era de conectar essa rede e fazer se comunicarem entre si, porém, os computadores eram diferentes, na época computadores diferentes falavam linguagens diferentes, para resolver isso, foi criado um protocolo chamado NCP (que tinha que parar a rede para a comunicação de dois pontos), que falava uma linguagem única.</p>
     
