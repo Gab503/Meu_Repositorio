@@ -45,7 +45,7 @@
    <p>Hospedagem: É o local onde o seu site vai estar armazenado. Geralmente a hospedagem é paga mensalmente (pense como se fosse um hotel).</p>
 
   <p>O que é uma URL ? <br>Ex:<a href="http://www.brasilescola.com.br" target="_blank">http://www.brasilescola.com.br</a>, isso é uma URL ( Localizador de Recurso Único), dentro de uma URL há partes, ex: <a href="http://www.github.com/gustavoguanabara" target="_blank">http://www.github.com/gustavoguanabara</a>.<br> O github é o domínio.<br>O .com é o TLD ( ou .net entre outros).<br>O www é o sub domínio principal do servidor web.<br>A barra / e o que estiver depois é o caminho.</p>
-<hr>
+<hr><br>
 
 <h1>Front-end Back-end e Full stack</h1>
 <p>Front-end: Client-Side. Desenvolvedor do lado do cliente. Gera a parte visual e iterativa do site. Linguagens: JavaScript, HTML, CSS.</p>
@@ -53,13 +53,18 @@
  <p>Back-end: Servir-Sider. Desenvolvedor ao lado do servidor. Foca na iteração do código com o servidor. Envolve bancos de dados. Linguagens: PHP, JavaScript, C#, Python entre outras.</p>
    
 <p>Full Stack: É ambas as áreas.</p>
-<hr>
+<hr><br>
 
 <h1>Hello world!</h1>
 <hr>
 <p>Esse é o meu primeiro documento HTML! estou muito feliz!</p>
-<hr>
+<hr><br>
+
+<h1>Parágrafos e Quebras de linha</h1>
+<p>Você pode escrever um parágrafo de qualquer jeito. Basta colocar tudo no meio do par de tags &lt;p&gt; e para fechar a tag &lt;/p&gt;<br>O sinal de maior e menor são partes da tag, então para mostrá-los no navegador, usa-se & l t (tudo junto)para o sinal de maior<br>E para o sinal de menor & g t.</p>
+<p>Para colocar uma linha separando os textos usa-se &lt;hr&gt; Exemplo:<hr>Se precisar quebra o texto em algum lugar<br>como essse, use a tag &lt;br&gt;</p>
+<hr><br>
 
 
 </body>
-</html>   
+</html>
