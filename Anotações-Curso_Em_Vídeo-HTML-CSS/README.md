@@ -53,7 +53,13 @@
  <p>Back-end: Servir-Sider. Desenvolvedor ao lado do servidor. Foca na iteração do código com o servidor. Envolve bancos de dados. Linguagens: PHP, JavaScript, C#, Python entre outras.</p>
    
 <p>Full Stack: É ambas as áreas.</p>
+<hr>
 
-   
+<h1>04 Hello world!</h1>
+<hr>
+<p>Esse é o meu primeiro documento HTML! estou muito feliz!</p>
+<hr>
+
+
 </body>
-</html>
+</html>   
